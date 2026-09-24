@@ -1,0 +1,997 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Koshur Darbar · Authentic Kashmiri Cuisine, Kulgam</title>
+<meta name="description" content="Koshur Darbar — an authentic Kashmiri restaurant in Kulgam. Wazwan, Rogan Josh, Kahwa and the taste of Kashmir, served with heart. 4.7★ on Google.">
+<meta name="theme-color" content="#0f241d">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath fill='%23c9973f' d='M50 5 58 22 66 16 64 34 86 26 78 42 90 48 70 58 76 70 58 64 54 78 52 78 52 95 48 95 48 78 46 78 42 64 24 70 30 58 10 48 22 42 14 26 36 34 34 16 42 22Z'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "Koshur Darbar",
+  "servesCuisine": ["Kashmiri", "Wazwan"],
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Ground Floor, Town Plaza",
+    "addressLocality": "Kulgam",
+    "addressRegion": "Jammu and Kashmir",
+    "postalCode": "192231",
+    "addressCountry": "IN"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.7",
+    "reviewCount": "46"
+  }
+}
+</script>
+
+<style>
+  :root {
+    --forest-0: #0c1f18;
+    --forest-1: #123528;
+    --forest-2: #1a4535;
+    --forest-3: #22513f;
+    --cream: #f6efdd;
+    --paper: #fbf7ec;
+    --paper-2: #f1e9d4;
+    --ink: #1b1712;
+    --muted: #5e6b60;
+    --muted-lt: #8b9690;
+    --line: #e3d9bd;
+    --line-dark: rgba(246, 239, 221, 0.14);
+    --gold: #c9973f;
+    --gold-lt: #e6c179;
+    --gold-dk: #96702c;
+    --maroon: #9c3b2e;
+    --maroon-lt: #c2543f;
+
+    --display: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+    --body: "Manrope", system-ui, -apple-system, "Segoe UI", sans-serif;
+
+    --wrap: 1200px;
+    --gutter: clamp(18px, 4.4vw, 44px);
+    --radius: 18px;
+    --radius-sm: 10px;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+  html { scroll-behavior: smooth; scroll-padding-top: 84px; }
+  body {
+    margin: 0;
+    font-family: var(--body);
+    font-size: 16.5px;
+    line-height: 1.65;
+    color: var(--ink);
+    background: var(--paper);
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+  img, svg { display: block; max-width: 100%; }
+  a { color: inherit; }
+  h1, h2, h3, h4 { font-family: var(--display); font-weight: 600; line-height: 1.05; margin: 0; letter-spacing: -0.005em; }
+  p { margin: 0; }
+  ::selection { background: var(--gold); color: var(--forest-0); }
+
+  .wrap { width: 100%; max-width: var(--wrap); margin: 0 auto; padding: 0 var(--gutter); }
+
+  .eyebrow {
+    display: inline-flex; align-items: center; gap: 12px;
+    font-size: 12px; font-weight: 700; letter-spacing: 0.24em; text-transform: uppercase;
+    color: var(--gold-dk);
+  }
+  .eyebrow::before { content: ""; width: 30px; height: 1px; background: currentColor; }
+  .on-dark .eyebrow { color: var(--gold-lt); }
+
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+    padding: 15px 28px; border-radius: 999px; white-space: nowrap;
+    font: 700 14.5px/1 var(--body); letter-spacing: 0.02em; text-decoration: none;
+    border: 1px solid transparent; cursor: pointer;
+    transition: transform .25s cubic-bezier(.2,.8,.2,1), background-color .25s ease, color .25s ease, border-color .25s ease, box-shadow .25s ease;
+  }
+  .btn:hover { transform: translateY(-2px); }
+  .btn:active { transform: translateY(0); }
+  .btn svg { width: 17px; height: 17px; flex: none; }
+  .btn-gold { background: linear-gradient(180deg, var(--gold-lt), var(--gold)); color: #241a08; box-shadow: 0 10px 24px -10px rgba(201,151,63,.6); }
+  .btn-gold:hover { box-shadow: 0 14px 30px -8px rgba(201,151,63,.7); }
+  .btn-line { border-color: rgba(246,239,221,.3); color: var(--cream); }
+  .btn-line:hover { border-color: var(--gold-lt); color: var(--gold-lt); }
+  .btn-dark { background: var(--forest-1); color: var(--cream); }
+  .btn-dark:hover { background: var(--forest-2); }
+  .btn-ghost-dark { border-color: rgba(27,23,18,.18); color: var(--ink); }
+  .btn-ghost-dark:hover { border-color: var(--forest-2); color: var(--forest-2); }
+  .btn-sm { padding: 11px 20px; font-size: 13px; }
+
+  :focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; border-radius: 6px; }
+
+  /* ---------- Header ---------- */
+  .site-header {
+    position: fixed; inset: 0 0 auto 0; z-index: 60;
+    transition: background-color .35s ease, box-shadow .35s ease, padding .35s ease;
+  }
+  .site-header.scrolled { background: rgba(12, 31, 24, .92); backdrop-filter: blur(12px); box-shadow: 0 1px 0 var(--line-dark); }
+  .nav { display: flex; align-items: center; justify-content: space-between; height: 88px; transition: height .35s ease; }
+  .scrolled .nav { height: 72px; }
+  .brand { display: flex; align-items: center; gap: 13px; text-decoration: none; color: var(--cream); }
+  .brand svg { width: 32px; height: 32px; color: var(--gold-lt); flex: none; }
+  .brand-name { font-family: var(--display); font-size: 24px; font-weight: 700; letter-spacing: 0.01em; line-height: 1; }
+  .brand-name small { display: block; font-family: var(--body); font-size: 10px; letter-spacing: 0.26em; text-transform: uppercase; color: rgba(246,239,221,.55); margin-top: 6px; font-weight: 600; }
+  .nav-links { display: flex; align-items: center; gap: 34px; list-style: none; margin: 0; padding: 0; }
+  .nav-links a:not(.btn) { color: rgba(246, 239, 221, .82); text-decoration: none; font-size: 14.5px; font-weight: 600; letter-spacing: .01em; transition: color .2s; position: relative; }
+  .nav-links a:not(.btn)::after { content: ""; position: absolute; left: 0; right: 0; bottom: -6px; height: 1px; background: var(--gold-lt); transform: scaleX(0); transform-origin: left; transition: transform .25s ease; }
+  .nav-links a:not(.btn):hover { color: var(--cream); }
+  .nav-links a:not(.btn):hover::after { transform: scaleX(1); }
+  .menu-toggle { display: none; background: none; border: 0; color: var(--cream); padding: 8px; margin-right: -8px; cursor: pointer; }
+  .menu-toggle svg { width: 26px; height: 26px; }
+
+  /* ---------- Hero ---------- */
+  .hero {
+    position: relative; overflow: hidden; min-height: 100svh;
+    display: flex; align-items: center;
+    background: radial-gradient(1200px 700px at 82% 20%, rgba(201,151,63,.16), transparent 60%), linear-gradient(180deg, var(--forest-0), var(--forest-1) 60%, var(--forest-0));
+    color: var(--cream);
+    padding: 130px 0 80px;
+  }
+  .hero-noise { position: absolute; inset: 0; opacity: .5; mix-blend-mode: overlay; pointer-events: none; }
+  .paisley-bg {
+    position: absolute; inset: 0; opacity: .06; pointer-events: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140' viewBox='0 0 140 140'%3E%3Cg fill='none' stroke='%23f6efdd' stroke-width='1.2'%3E%3Cpath d='M40 112c-23-3-29-31-14-50 12-14 30-16 35-35 10 19 10 43-4 63-6 9-10 20-17 22z'/%3E%3Ccircle cx='47' cy='78' r='3.4'/%3E%3C/g%3E%3C/svg%3E");
+    background-size: 140px 140px;
+  }
+  .hero-grid { position: relative; display: grid; grid-template-columns: 1.08fr 0.92fr; gap: 56px; align-items: center; z-index: 1; }
+  .hero .rating-pill {
+    display: inline-flex; align-items: center; gap: 10px; padding: 9px 16px 9px 10px; border-radius: 999px;
+    background: rgba(246,239,221,.07); border: 1px solid rgba(246,239,221,.18); margin-bottom: 28px;
+  }
+  .rating-pill .stars { display: inline-flex; gap: 2px; color: var(--gold-lt); }
+  .rating-pill .stars svg { width: 14px; height: 14px; }
+  .rating-pill span { font-size: 13.5px; font-weight: 700; letter-spacing: .01em; }
+  .rating-pill .n { color: rgba(246,239,221,.6); font-weight: 500; }
+  .hero h1 { font-size: clamp(42px, 5.6vw, 76px); font-weight: 600; letter-spacing: -0.01em; margin-bottom: 26px; }
+  .hero h1 .line2 { display: block; }
+  .hero h1 em { font-style: italic; font-weight: 500; background: linear-gradient(96deg, var(--gold-lt), var(--gold) 55%, var(--gold-lt)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .hero .lede { font-size: clamp(17px, 1.5vw, 19px); color: rgba(246, 239, 221, .74); max-width: 34em; font-weight: 400; }
+  .hero-actions { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 40px; }
+  .hero-stats { display: flex; flex-wrap: wrap; gap: 32px 40px; margin-top: 56px; padding-top: 30px; border-top: 1px solid var(--line-dark); }
+  .hero-stats div { font-size: 13px; color: rgba(246, 239, 221, .55); }
+  .hero-stats strong { display: block; font-family: var(--display); font-weight: 700; font-size: 30px; color: var(--cream); line-height: 1.1; margin-bottom: 3px; }
+
+  .hero-visual { position: relative; aspect-ratio: 3/4; justify-self: center; width: min(100%, 480px); }
+  .hero-visual .frame { position: absolute; inset: 0; border-radius: 20px; overflow: hidden; box-shadow: 0 50px 90px -30px rgba(0,0,0,.65), 0 0 0 1px rgba(246,239,221,.08); }
+  .hero-visual .frame svg { width: 100%; height: 100%; }
+  .hero-visual .badge {
+    position: absolute; left: -28px; bottom: 34px; background: var(--cream); color: var(--ink); border-radius: 16px;
+    padding: 18px 22px; box-shadow: 0 24px 50px -18px rgba(0,0,0,.5); display: flex; align-items: center; gap: 14px;
+    max-width: 240px;
+  }
+  .hero-visual .badge .ic { width: 42px; height: 42px; border-radius: 50%; background: var(--forest-1); display: grid; place-items: center; flex: none; }
+  .hero-visual .badge .ic svg { width: 20px; height: 20px; color: var(--gold-lt); }
+  .hero-visual .badge b { display: block; font-family: var(--display); font-size: 19px; font-weight: 700; }
+  .hero-visual .badge span { font-size: 12.5px; color: var(--muted); }
+  .hero-visual .tag-float {
+    position: absolute; right: -18px; top: 30px; background: rgba(12,31,24,.85); backdrop-filter: blur(6px);
+    border: 1px solid rgba(246,239,221,.18); color: var(--cream); border-radius: 999px; padding: 9px 16px;
+    font-size: 12px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; display: flex; align-items: center; gap: 8px;
+  }
+  .tag-float::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--gold-lt); box-shadow: 0 0 0 4px rgba(230,193,121,.2); }
+
+  .scroll-cue { position: absolute; left: 50%; bottom: 30px; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; gap: 8px; color: rgba(246,239,221,.5); z-index: 1; }
+  .scroll-cue span { font-size: 10.5px; letter-spacing: .2em; text-transform: uppercase; font-weight: 700; }
+  .scroll-cue .line { width: 1px; height: 34px; background: linear-gradient(180deg, rgba(246,239,221,.7), transparent); animation: cue 2.2s ease-in-out infinite; }
+  @keyframes cue { 0% { transform: scaleY(0); transform-origin: top; opacity: 0; } 40% { transform: scaleY(1); transform-origin: top; opacity: 1; } 60% { transform: scaleY(1); transform-origin: bottom; opacity: 1; } 100% { transform: scaleY(0); transform-origin: bottom; opacity: 0; } }
+
+  /* ---------- Marquee ---------- */
+  .marquee { background: linear-gradient(90deg, var(--gold-dk), var(--gold) 50%, var(--gold-dk)); color: #241a08; overflow: hidden; padding: 15px 0; }
+  .marquee-track { display: flex; width: max-content; animation: scroll 42s linear infinite; }
+  .marquee-track span { font-family: var(--display); font-style: italic; font-weight: 600; font-size: 21px; padding: 0 24px; white-space: nowrap; display: inline-flex; align-items: center; gap: 46px; }
+  .marquee-track span::after { content: ""; width: 7px; height: 7px; background: #241a08; opacity: .5; transform: rotate(45deg); }
+  @keyframes scroll { to { transform: translateX(-50%); } }
+
+  /* ---------- Sections ---------- */
+  section { position: relative; }
+  .section { padding: clamp(84px, 11vw, 148px) 0; }
+  .section-head { max-width: 640px; margin-bottom: 60px; }
+  .section-head.center { margin-left: auto; margin-right: auto; text-align: center; }
+  .section-head.center .eyebrow::after { content: ""; width: 30px; height: 1px; background: currentColor; }
+  .section-head h2 { font-size: clamp(36px, 4.6vw, 58px); margin-top: 18px; }
+  .section-head p { margin-top: 20px; color: var(--muted); font-size: 18.5px; }
+  .on-dark .section-head p { color: rgba(246,239,221,.68); }
+
+  .js .reveal { opacity: 0; transform: translateY(28px); transition: opacity .9s cubic-bezier(.2,.7,.2,1), transform .9s cubic-bezier(.2,.7,.2,1); }
+  .js .reveal.in { opacity: 1; transform: none; }
+  .js .reveal-scale { opacity: 0; transform: scale(.94); transition: opacity 1s ease, transform 1s cubic-bezier(.2,.7,.2,1); }
+  .js .reveal-scale.in { opacity: 1; transform: none; }
+
+  /* About */
+  .about { background: var(--paper); }
+  .about-grid { display: grid; grid-template-columns: 0.85fr 1.15fr; gap: clamp(44px, 7vw, 100px); align-items: center; }
+  .about-frame { position: relative; aspect-ratio: 4/5; border-radius: var(--radius); overflow: hidden; box-shadow: 0 40px 70px -34px rgba(20,40,32,.4); }
+  .about-frame svg { width: 100%; height: 100%; }
+  .about-frame-tag {
+    position: absolute; left: 20px; bottom: 20px; right: 20px; background: rgba(12,31,24,.82); backdrop-filter: blur(6px);
+    color: var(--cream); border-radius: var(--radius-sm); padding: 16px 18px; display: flex; align-items: center; gap: 12px;
+  }
+  .about-frame-tag svg { width: 26px; height: 26px; color: var(--gold-lt); flex: none; }
+  .about-frame-tag b { display: block; font-family: var(--display); font-size: 17px; font-weight: 700; }
+  .about-frame-tag span { font-size: 12px; color: rgba(246,239,221,.65); }
+  .about-copy h2 { font-size: clamp(36px, 4.4vw, 52px); margin: 18px 0 24px; }
+  .about-copy .lead-line { font-family: var(--display); font-size: clamp(21px, 2.1vw, 25px); line-height: 1.5; color: var(--ink); font-weight: 500; font-style: italic; }
+  .about-copy p.body-p { color: var(--muted); margin-top: 20px; font-size: 17px; }
+  .pillars { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 40px; }
+  .pillar { padding: 22px 20px; border-radius: var(--radius-sm); background: var(--cream); border: 1px solid var(--line); }
+  .pillar .ic { width: 40px; height: 40px; border-radius: 50%; background: var(--forest-1); display: grid; place-items: center; margin-bottom: 14px; }
+  .pillar .ic svg { width: 19px; height: 19px; color: var(--gold-lt); }
+  .pillar b { display: block; font-family: var(--display); font-size: 18.5px; font-weight: 700; margin-bottom: 5px; }
+  .pillar span { font-size: 13.5px; color: var(--muted); line-height: 1.5; }
+
+  /* Signature dishes */
+  .dishes-section { background: var(--forest-0); color: var(--cream); overflow: hidden; }
+  .dish-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px; }
+  .dish-card {
+    position: relative; border-radius: var(--radius); overflow: hidden; background: var(--forest-1);
+    border: 1px solid var(--line-dark); transition: transform .5s cubic-bezier(.2,.8,.2,1), box-shadow .5s ease;
+  }
+  .dish-card:hover { transform: translateY(-8px); box-shadow: 0 30px 60px -24px rgba(0,0,0,.6); }
+  .dish-media { position: relative; aspect-ratio: 6/5; overflow: hidden; }
+  .dish-media svg { width: 100%; height: 100%; transition: transform .7s cubic-bezier(.2,.8,.2,1); }
+  .dish-card:hover .dish-media svg { transform: scale(1.07); }
+  .dish-media::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 55%, rgba(12,31,24,.9)); }
+  .dish-tag {
+    position: absolute; top: 16px; left: 16px; z-index: 1; background: rgba(246,239,221,.94); color: var(--forest-1);
+    font-size: 10.5px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; padding: 6px 11px; border-radius: 999px;
+  }
+  .dish-body { padding: 22px 22px 26px; }
+  .dish-body .row { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; }
+  .dish-body h3 { font-size: 24px; font-weight: 700; }
+  .dish-body .local { font-family: var(--display); font-style: italic; color: var(--gold-lt); font-size: 14px; margin-top: 2px; display: block; }
+  .dish-body p { color: rgba(246,239,221,.62); font-size: 14.5px; margin-top: 10px; line-height: 1.6; }
+  .dishes-cta { margin-top: 52px; text-align: center; }
+  .dishes-cta p { color: rgba(246,239,221,.6); margin-bottom: 20px; font-size: 15.5px; }
+
+  /* Gallery */
+  .gallery { background: var(--paper-2); }
+  .gallery-grid { display: grid; grid-template-columns: repeat(4, 1fr); grid-auto-rows: 150px; gap: 16px; }
+  .gallery-item { position: relative; border-radius: 14px; overflow: hidden; cursor: pointer; }
+  .gallery-item.big { grid-column: span 2; grid-row: span 2; }
+  .gallery-item svg { width: 100%; height: 100%; transition: transform .7s cubic-bezier(.2,.8,.2,1); }
+  .gallery-item::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 45%, rgba(12,20,16,.82)); opacity: .75; transition: opacity .4s ease; }
+  .gallery-item:hover svg { transform: scale(1.08); }
+  .gallery-item:hover::after { opacity: .9; }
+  .gallery-cap { position: absolute; left: 16px; right: 16px; bottom: 14px; z-index: 1; color: var(--cream); }
+  .gallery-cap b { font-family: var(--display); font-size: 17px; font-weight: 700; display: block; }
+  .gallery-cap span { font-size: 11.5px; color: rgba(246,239,221,.65); letter-spacing: .04em; text-transform: uppercase; }
+
+  /* Reviews */
+  .reviews { background: var(--forest-1); color: var(--cream); position: relative; overflow: hidden; }
+  .reviews-summary { display: flex; align-items: center; gap: 26px; margin-bottom: 12px; flex-wrap: wrap; }
+  .reviews-summary .big-rating { font-family: var(--display); font-size: 64px; font-weight: 700; line-height: 1; }
+  .reviews-summary .stars-row { display: flex; gap: 4px; color: var(--gold-lt); margin: 8px 0 6px; }
+  .reviews-summary .stars-row svg { width: 20px; height: 20px; }
+  .reviews-summary .meta { font-size: 14px; color: rgba(246,239,221,.6); }
+  .review-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  .review-card { background: rgba(246,239,221,.05); border: 1px solid var(--line-dark); border-radius: var(--radius); padding: 30px 26px; display: flex; flex-direction: column; gap: 18px; }
+  .review-card .quote-mark { width: 30px; height: 22px; color: var(--gold-lt); opacity: .8; }
+  .review-card .stars { display: flex; gap: 3px; color: var(--gold-lt); }
+  .review-card .stars svg { width: 15px; height: 15px; }
+  .review-card p.quote { font-size: 16px; line-height: 1.65; color: rgba(246,239,221,.88); flex: 1; }
+  .review-who { display: flex; align-items: center; gap: 12px; padding-top: 16px; border-top: 1px solid var(--line-dark); }
+  .review-avatar { width: 40px; height: 40px; border-radius: 50%; display: grid; place-items: center; font-family: var(--display); font-weight: 700; font-size: 16px; color: var(--forest-0); flex: none; }
+  .review-who b { display: block; font-size: 14.5px; font-weight: 700; }
+  .review-who span { font-size: 12.5px; color: rgba(246,239,221,.55); }
+
+  /* Visit */
+  .visit { background: var(--paper); }
+  .visit-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 30px; align-items: stretch; }
+  .visit-card { padding: clamp(30px, 4vw, 46px); border-radius: 22px; background: var(--forest-0); color: var(--cream); display: flex; flex-direction: column; position: relative; overflow: hidden; }
+  .visit-card::before { content: ""; position: absolute; inset: 0; background: radial-gradient(500px 300px at 100% 0%, rgba(201,151,63,.14), transparent 70%); pointer-events: none; }
+  .visit-card h2 { font-size: clamp(32px, 4vw, 44px); margin: 18px 0 30px; position: relative; }
+  .info-row { display: grid; grid-template-columns: 24px 1fr; gap: 16px; padding: 19px 0; border-top: 1px solid var(--line-dark); position: relative; }
+  .info-row svg { width: 22px; height: 22px; color: var(--gold-lt); margin-top: 2px; }
+  .info-row b { display: block; font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: rgba(246,239,221,.5); font-weight: 700; margin-bottom: 5px; }
+  .info-row span, .info-row a { font-size: 16.5px; color: var(--cream); text-decoration: none; }
+  .info-row a:hover { color: var(--gold-lt); }
+  .hours-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 4px; }
+  .hours-list li { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 2px 16px; font-size: 15.5px; }
+  .hours-list li span:first-child { color: rgba(246,239,221,.6); }
+  .visit-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: auto; padding-top: 30px; position: relative; }
+  .map-wrap { border-radius: 22px; overflow: hidden; min-height: 440px; border: 1px solid var(--line); background: var(--paper-2); position: relative; }
+  .map-wrap iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; filter: sepia(.18) saturate(.92); }
+  .map-fallback {
+    position: absolute; inset: 0; display: grid; place-content: center; justify-items: center; gap: 14px; text-align: center; padding: 24px;
+    color: var(--muted); text-decoration: none;
+    background:
+      linear-gradient(0deg, transparent 49.5%, rgba(34,81,63,.12) 49.5% 50.5%, transparent 50.5%) 0 0 / 58px 58px,
+      linear-gradient(90deg, transparent 49.5%, rgba(34,81,63,.12) 49.5% 50.5%, transparent 50.5%) 0 0 / 58px 58px,
+      var(--paper-2);
+  }
+  .map-fallback svg { width: 44px; height: 44px; color: var(--maroon); }
+  .map-fallback b { font-family: var(--display); font-weight: 700; font-size: 25px; color: var(--ink); }
+
+  /* CTA banner */
+  .cta-banner { background: linear-gradient(120deg, var(--forest-0), var(--forest-2)); color: var(--cream); position: relative; overflow: hidden; }
+  .cta-banner .paisley-bg { opacity: .08; }
+  .cta-banner-inner { display: flex; align-items: center; justify-content: space-between; gap: 32px; flex-wrap: wrap; padding: 68px 0; position: relative; }
+  .cta-banner h2 { font-size: clamp(30px, 3.6vw, 46px); max-width: 14em; }
+  .cta-banner .actions { display: flex; gap: 14px; flex-wrap: wrap; }
+
+  /* Footer */
+  .site-footer { background: var(--forest-0); color: rgba(246,239,221,.68); padding: 68px 0 34px; font-size: 14.5px; }
+  .footer-top { display: grid; grid-template-columns: 1.3fr 1fr 1fr 1fr; gap: 40px; padding-bottom: 44px; border-bottom: 1px solid var(--line-dark); }
+  .footer-brand .brand-name { font-size: 26px; color: var(--cream); }
+  .footer-brand p { margin-top: 16px; max-width: 26em; color: rgba(246,239,221,.6); }
+  .footer-social { display: flex; gap: 10px; margin-top: 20px; }
+  .footer-social a { width: 38px; height: 38px; border-radius: 50%; border: 1px solid var(--line-dark); display: grid; place-items: center; text-decoration: none; transition: border-color .2s, background .2s; }
+  .footer-social a:hover { border-color: var(--gold-lt); background: rgba(230,193,121,.08); }
+  .footer-social svg { width: 16px; height: 16px; color: var(--cream); }
+  .footer-links h4 { margin: 0 0 16px; font-size: 12px; letter-spacing: .16em; text-transform: uppercase; color: var(--gold-lt); font-weight: 700; }
+  .footer-links ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+  .footer-links a { text-decoration: none; }
+  .footer-links a:hover { color: var(--cream); }
+  .footer-bottom { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; padding-top: 28px; font-size: 13px; color: rgba(246,239,221,.4); }
+
+  /* Mobile sticky CTA bar */
+  .mobile-cta-bar {
+    display: none; position: fixed; left: 0; right: 0; bottom: 0; z-index: 70;
+    background: rgba(12,31,24,.96); backdrop-filter: blur(10px); border-top: 1px solid var(--line-dark);
+    padding: 10px 14px; gap: 10px;
+  }
+  .mobile-cta-bar a { flex: 1; }
+
+  /* ---------- Responsive ---------- */
+  @media (max-width: 1080px) {
+    .dish-grid { grid-template-columns: repeat(2, 1fr); }
+    .review-grid { grid-template-columns: repeat(2, 1fr); }
+    .footer-top { grid-template-columns: 1.3fr 1fr 1fr; }
+    .footer-top .footer-links:last-child { grid-column: span 1; }
+  }
+  @media (max-width: 940px) {
+    .hero-grid, .about-grid, .visit-grid { grid-template-columns: 1fr; }
+    .hero-visual { order: -1; margin: 0 auto 8px; width: min(100%, 380px); }
+    .hero-visual .badge { left: 6px; }
+    .hero-visual .tag-float { right: 6px; }
+    .gallery-grid { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 170px; }
+    .gallery-item.big { grid-column: span 2; grid-row: span 1; aspect-ratio: 2/1; }
+    .pillars { grid-template-columns: 1fr; }
+    .footer-top { grid-template-columns: 1fr 1fr; row-gap: 32px; }
+    .footer-brand { grid-column: span 2; }
+  }
+  @media (max-width: 760px) {
+    body { font-size: 16px; padding-bottom: 74px; }
+    .menu-toggle { display: block; }
+    .nav-links {
+      position: fixed; inset: 72px 0 auto 0; flex-direction: column; align-items: stretch; gap: 0;
+      background: var(--forest-0); padding: 8px var(--gutter) 24px; border-top: 1px solid var(--line-dark);
+      transform: translateY(-8px); opacity: 0; visibility: hidden; transition: all .25s ease; max-height: calc(100svh - 72px); overflow-y: auto;
+    }
+    .nav-links.open { transform: none; opacity: 1; visibility: visible; }
+    .nav-links li a:not(.btn) { display: block; padding: 15px 0; font-size: 18px; border-bottom: 1px solid var(--line-dark); }
+    .nav-links li:last-child { margin-top: 18px; }
+    .nav-links li:last-child .btn { width: 100%; }
+    .site-header.menu-open { background: var(--forest-0); }
+    .dish-grid, .review-grid { grid-template-columns: 1fr; }
+    .reviews-summary { flex-direction: column; align-items: flex-start; }
+    .cta-banner-inner { flex-direction: column; align-items: flex-start; text-align: left; }
+    .cta-banner .actions { width: 100%; }
+    .cta-banner .actions .btn { flex: 1; }
+    .mobile-cta-bar { display: flex; }
+    .hero { padding: 116px 0 64px; }
+    .hero-stats { gap: 22px 28px; }
+    .hero-stats strong { font-size: 25px; }
+  }
+  @media (max-width: 600px) {
+    .gallery-grid { grid-template-columns: 1fr 1fr; grid-auto-rows: 140px; }
+    .footer-top { grid-template-columns: 1fr 1fr; }
+    .footer-brand { grid-column: span 2; }
+    .hero-actions .btn { flex: 1 1 auto; }
+    .hero-visual .badge { max-width: 200px; padding: 14px 16px; gap: 10px; }
+    .hero-visual .badge b { font-size: 17px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .marquee-track, .scroll-cue .line { animation: none; }
+    .js .reveal, .js .reveal-scale { opacity: 1; transform: none; transition: none; }
+  }
+</style>
+</head>
+<body>
+
+<!--
+  ============================================================
+  PLACEHOLDERS TO CONFIRM WITH THE RESTAURANT BEFORE GOING LIVE
+  - Phone number     -> search "PHONE" in this file
+  - Opening hours    -> search "HOURS" in this file
+  - Menu & prices    -> search "MENU"  in this file
+  - Google reviews   -> search "REVIEW" — the 3 testimonials and the
+    4.7★ / 46-reviews figures are ILLUSTRATIVE placeholders for this
+    pitch. Replace with the real rating and real review quotes
+    (with permission) before this page is shown to the public.
+  - Photography      -> every "photo" on this page is an illustrated
+    SVG composition (no stock or scraped images were used). Swap in
+    real food & interior photography for the final build.
+  ============================================================
+-->
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="chinar" viewBox="0 0 100 100"><path fill="currentColor" d="M50 5 58 22 66 16 64 34 86 26 78 42 90 48 70 58 76 70 58 64 54 78 52 78 52 95 48 95 48 78 46 78 42 64 24 70 30 58 10 48 22 42 14 26 36 34 34 16 42 22Z"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" d="M12 21s-7-6.2-7-11.5a7 7 0 1 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5" fill="none" stroke="currentColor" stroke-width="1.7"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" d="M5 4h3.5l1.6 4.2-2.2 1.4a11 11 0 0 0 6.5 6.5l1.4-2.2L20 15.5V19a1.5 1.5 0 0 1-1.6 1.5A16 16 0 0 1 3.5 5.6 1.5 1.5 0 0 1 5 4z"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.7"/><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" d="M12 7.5V12l3 2"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><path fill="currentColor" d="m12 3.2 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 3.1 1-6.1-4.4-4.3 6.1-.9z"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-5-5 5 5-5 5"/></symbol>
+    <symbol id="i-dir" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" d="m12 2.8 9.2 9.2-9.2 9.2L2.8 12z"/><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" d="M9 13.5V11h5.5m-2-2 2 2-2 2"/></symbol>
+    <symbol id="i-leaf" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" d="M5 19c9 1 15-5 15-14C11 5 5 11 5 19z"/><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" d="M6 18c4-4 8-8 12-12"/></symbol>
+    <symbol id="i-fire" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" d="M12 3c1 3-3 4-3 8a3 3 0 0 0 6 0c1 1 2 3 2 5a5 5 0 0 1-10 0c0-4 2-6 3-9 .3 1 1 2 2 1z"/></symbol>
+    <symbol id="i-hand" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" d="M8 12V6a1.5 1.5 0 0 1 3 0v5m0-4a1.5 1.5 0 0 1 3 0v4m0-2.5a1.5 1.5 0 0 1 3 0V13m-9-1v6a4 4 0 0 0 4 4h2a5 5 0 0 0 5-5v-3.5"/></symbol>
+    <symbol id="i-quote" viewBox="0 0 32 24"><path fill="currentColor" d="M0 24V13.8C0 6 4.6.8 12 0v4.6C7.6 5.6 5.4 8.4 5.2 12H12v12H0Zm18 0V13.8C18 6 22.6.8 30 0v4.6c-4.4 1-6.6 3.8-6.8 7.4H30v12H18Z"/></symbol>
+    <symbol id="i-insta" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor"/></symbol>
+    <symbol id="i-fb" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.6" d="M14 21v-8h3l.5-3.5H14V7.2c0-1 .4-1.7 2-1.7h1.6V2.2C17 2.1 15.8 2 14.6 2 11.8 2 10 3.7 10 6.8v2.7H7V13h3v8h4z"/></symbol>
+    <symbol id="i-whatsapp" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" d="M4 20l1.3-3.9A8 8 0 1 1 8.6 19L4 20Z"/><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" d="M9 9.4c0 3.4 2.6 6 6 6 .5 0 .8-.5.6-1l-.8-1.7c-.2-.4-.7-.5-1-.3l-.8.5a5 5 0 0 1-2.5-2.5l.5-.8c.2-.3.1-.8-.3-1L9.9 8c-.5-.2-1 .1-1 .6z"/></symbol>
+  </defs>
+</svg>
+
+<header class="site-header" id="top">
+  <nav class="wrap nav" aria-label="Main">
+    <a href="#top" class="brand" aria-label="Koshur Darbar home">
+      <svg aria-hidden="true"><use href="#chinar"/></svg>
+      <span class="brand-name">Koshur Darbar<small>Kulgam · Kashmir</small></span>
+    </a>
+    <button class="menu-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#dishes">Menu</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#visit">Visit</a></li>
+      <li><a href="#visit" class="btn btn-gold btn-sm">Book a Table</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <!-- ============ HERO ============ -->
+  <section class="hero on-dark">
+    <div class="paisley-bg" aria-hidden="true"></div>
+    <div class="wrap hero-grid">
+      <div>
+        <span class="rating-pill">
+          <span class="stars" aria-hidden="true"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span>
+          <span>4.7 <span class="n">· 46 Google reviews</span></span>
+        </span>
+        <h1>The Taste of Kashmir,<span class="line2"><em>Served&nbsp;With&nbsp;Heart.</em></span></h1>
+        <p class="lede">From the copper trami to your table — Koshur Darbar brings the slow-cooked richness of a Kashmiri Wazwan to Town Plaza, Kulgam. Every dish is a small act of hospitality.</p>
+        <div class="hero-actions">
+          <a href="#visit" class="btn btn-gold">Book a Table <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          <!-- PHONE: replace tel:+91XXXXXXXXXX once the number is confirmed -->
+          <a href="tel:+91XXXXXXXXXX" class="btn btn-line"><svg aria-hidden="true"><use href="#i-phone"/></svg> Call Now</a>
+        </div>
+        <div class="hero-stats">
+          <div><strong>4.7★</strong>Google rating</div>
+          <div><strong>25+</strong>Wazwan &amp; Kashmiri dishes</div>
+          <div><strong>100%</strong>Halal, slow-cooked</div>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="frame" aria-hidden="true">
+          <svg viewBox="0 0 480 640" preserveAspectRatio="xMidYMid slice">
+            <defs>
+              <linearGradient id="heroBg" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#1a4535"/>
+                <stop offset=".55" stop-color="#0f2a20"/>
+                <stop offset="1" stop-color="#0a1c15"/>
+              </linearGradient>
+              <radialGradient id="heroSpot" cx="42%" cy="30%" r="60%">
+                <stop offset="0" stop-color="#e6c179" stop-opacity=".35"/>
+                <stop offset="1" stop-color="#e6c179" stop-opacity="0"/>
+              </radialGradient>
+              <radialGradient id="heroPlate" cx="42%" cy="35%" r="70%">
+                <stop offset="0" stop-color="#e3a878"/>
+                <stop offset=".6" stop-color="#b8683a"/>
+                <stop offset="1" stop-color="#6f3a1e"/>
+              </radialGradient>
+              <radialGradient id="heroRice" cx="40%" cy="35%" r="68%">
+                <stop offset="0" stop-color="#fffaf0"/>
+                <stop offset=".7" stop-color="#efe0c4"/>
+                <stop offset="1" stop-color="#d3bd97"/>
+              </radialGradient>
+              <linearGradient id="heroRib" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#b8652e"/>
+                <stop offset="1" stop-color="#5e2812"/>
+              </linearGradient>
+              <linearGradient id="heroGravy" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#c2542f"/>
+                <stop offset="1" stop-color="#7a2515"/>
+              </linearGradient>
+            </defs>
+            <rect width="480" height="640" fill="url(#heroBg)"/>
+            <rect width="480" height="640" fill="url(#heroSpot)"/>
+            <g opacity=".5">
+              <use href="#chinar" x="30" y="40" width="30" height="30" color="#c9973f" transform="rotate(-15 45 55)"/>
+              <use href="#chinar" x="400" y="90" width="22" height="22" color="#e6c179" transform="rotate(20 411 101)"/>
+            </g>
+            <!-- copper handi with rogan josh -->
+            <ellipse cx="240" cy="430" rx="160" ry="34" fill="#000" opacity=".28"/>
+            <path d="M110 300c0-30 58-46 130-46s130 16 130 46v70c0 55-58 96-130 96s-130-41-130-96z" fill="url(#heroPlate)"/>
+            <ellipse cx="240" cy="300" rx="130" ry="42" fill="url(#heroRice)"/>
+            <ellipse cx="240" cy="300" rx="130" ry="42" fill="none" stroke="#8a4623" stroke-width="2" opacity=".4"/>
+            <path d="M150 292c14 18 40 28 90 28s76-10 90-28" fill="none" stroke="#6f3a1e" stroke-width="2" opacity=".3"/>
+            <!-- gravy pool -->
+            <ellipse cx="240" cy="304" rx="72" ry="24" fill="url(#heroGravy)"/>
+            <circle cx="212" cy="298" r="13" fill="#8a2e1d"/>
+            <circle cx="248" cy="308" r="15" fill="#93321f"/>
+            <circle cx="270" cy="294" r="11" fill="#8a2e1d"/>
+            <g fill="#5d8f2f" opacity=".9">
+              <ellipse cx="196" cy="284" rx="4.5" ry="2.6" transform="rotate(25 196 284)"/>
+              <ellipse cx="286" cy="288" rx="4.5" ry="2.6" transform="rotate(-20 286 288)"/>
+            </g>
+            <g fill="#c8321c">
+              <rect x="290" y="278" width="14" height="3.6" rx="1.8" transform="rotate(30 297 280)"/>
+            </g>
+            <!-- ribs stacked -->
+            <g transform="translate(240 218)">
+              <rect x="-58" y="-14" width="116" height="28" rx="12" fill="url(#heroRib)"/>
+              <rect x="-46" y="-8" width="4" height="16" rx="2" fill="#f3d3a8" opacity=".7"/>
+              <rect x="-20" y="-9" width="4" height="18" rx="2" fill="#f3d3a8" opacity=".7"/>
+              <rect x="8" y="-8" width="4" height="16" rx="2" fill="#f3d3a8" opacity=".7"/>
+              <rect x="34" y="-9" width="4" height="18" rx="2" fill="#f3d3a8" opacity=".7"/>
+            </g>
+            <!-- steam -->
+            <g fill="none" stroke="#e6c179" stroke-width="2.4" stroke-linecap="round" opacity=".55">
+              <path d="M198 210c-10-16 12-24 0-42"/>
+              <path d="M240 198c-10-16 12-24 0-42"/>
+              <path d="M282 210c-10-16 12-24 0-42"/>
+            </g>
+            <!-- gold rim ring -->
+            <circle cx="240" cy="300" r="150" fill="none" stroke="#e6c179" stroke-width="1" opacity=".35"/>
+          </svg>
+        </div>
+        <div class="badge">
+          <div class="ic"><svg aria-hidden="true"><use href="#i-leaf"/></svg></div>
+          <div><b>Slow-cooked daily</b><span>Traditional waza recipes, no shortcuts</span></div>
+        </div>
+        <div class="tag-float">Since generations · Kulgam</div>
+      </div>
+    </div>
+    <div class="scroll-cue" aria-hidden="true"><span>Scroll</span><span class="line"></span></div>
+  </section>
+
+  <!-- ============ MARQUEE ============ -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>Rogan Josh</span><span>Gushtaba</span><span>Rista</span><span>Yakhni</span><span>Tabak Maaz</span><span>Kahwa</span><span>Dum Aloo</span><span>Nadru Yakhni</span><span>Phirni</span>
+      <span>Rogan Josh</span><span>Gushtaba</span><span>Rista</span><span>Yakhni</span><span>Tabak Maaz</span><span>Kahwa</span><span>Dum Aloo</span><span>Nadru Yakhni</span><span>Phirni</span>
+    </div>
+  </div>
+
+  <!-- ============ ABOUT ============ -->
+  <section class="section about" id="about">
+    <div class="wrap about-grid">
+      <div class="about-frame reveal-scale" aria-hidden="true">
+        <svg viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice">
+          <defs>
+            <linearGradient id="aboutSky" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#2c5c48"/>
+              <stop offset=".5" stop-color="#193d30"/>
+              <stop offset="1" stop-color="#0c2119"/>
+            </linearGradient>
+          </defs>
+          <rect width="400" height="500" fill="url(#aboutSky)"/>
+          <circle cx="290" cy="120" r="38" fill="#e6c179" opacity=".7"/>
+          <path d="M0 260 L70 200 L130 234 L190 168 L250 226 L310 180 L400 218 L400 500 L0 500Z" fill="#123528"/>
+          <g fill="#1a4535">
+            <circle cx="70" cy="300" r="46"/><circle cx="110" cy="286" r="38"/><circle cx="40" cy="322" r="34"/>
+            <circle cx="330" cy="308" r="48"/><circle cx="296" cy="290" r="34"/><circle cx="364" cy="328" r="36"/>
+          </g>
+          <g fill="#22513f">
+            <circle cx="86" cy="280" r="22"/><circle cx="318" cy="288" r="24"/>
+          </g>
+          <rect x="0" y="350" width="400" height="150" fill="#0a1c15"/>
+          <path d="M40 380 H140 M210 396 H330 M90 420 H200 M250 434 H370" stroke="#c9973f" stroke-width="2" opacity=".3" stroke-linecap="round"/>
+          <path d="M120 372 Q200 388 290 368 Q282 382 200 386 Q140 386 120 372Z" fill="#0a1409"/>
+          <path d="M175 376 V356 H232 V374" fill="none" stroke="#0a1409" stroke-width="4"/>
+          <path d="M168 358 Q204 340 240 358Z" fill="#0a1409"/>
+          <use href="#chinar" x="50" y="90" width="26" height="26" color="#c9973f" transform="rotate(-18 63 103)"/>
+          <use href="#chinar" x="300" y="60" width="20" height="20" color="#e6c179" transform="rotate(22 310 70)"/>
+        </svg>
+        <div class="about-frame-tag">
+          <svg aria-hidden="true"><use href="#i-hand"/></svg>
+          <div><b>Made by wazas</b><span>Master chefs of the Kashmiri kitchen</span></div>
+        </div>
+      </div>
+      <div class="about-copy reveal">
+        <span class="eyebrow">About Koshur Darbar</span>
+        <h2>Where every meal feels like a homecoming.</h2>
+        <p class="lead-line">"Koshur" means Kashmiri. "Darbar" means a court of honoured guests. Together, they are a promise: come to our table, and you'll be treated like family.</p>
+        <p class="body-p">Koshur Darbar was built around the Wazwan tradition — the great feast of Kashmir, where dozens of dishes are cooked slowly by hand and shared from a single copper trami. We cook the same way: real ghee, hand-pounded meat, Kashmiri chillies for colour rather than heat, and a patience that can't be rushed.</p>
+        <div class="pillars">
+          <div class="pillar"><div class="ic"><svg aria-hidden="true"><use href="#i-leaf"/></svg></div><b>Authentic Recipes</b><span>Passed down through generations of Kashmiri wazas.</span></div>
+          <div class="pillar"><div class="ic"><svg aria-hidden="true"><use href="#i-fire"/></svg></div><b>Slow-Cooked, Always</b><span>No shortcuts — every gravy is simmered to depth.</span></div>
+          <div class="pillar"><div class="ic"><svg aria-hidden="true"><use href="#i-hand"/></svg></div><b>Warm Hospitality</b><span>You're a guest at our table, not just a customer.</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SIGNATURE DISHES ============ -->
+  <section class="section dishes-section" id="dishes">
+    <div class="paisley-bg" aria-hidden="true"></div>
+    <div class="wrap on-dark" style="position:relative">
+      <div class="section-head center reveal">
+        <span class="eyebrow">Signature dishes</span>
+        <h2>Kashmir on a plate</h2>
+        <p>A few of the dishes our guests keep coming back for.</p>
+      </div>
+
+      <div class="dish-grid">
+        <article class="dish-card reveal">
+          <div class="dish-media"><span class="dish-tag">Chef's Pick</span>
+            <svg viewBox="0 0 300 250" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+              <defs><radialGradient id="d1bg" cx="45%" cy="35%" r="75%"><stop offset="0" stop-color="#2a5a45"/><stop offset="1" stop-color="#0f2a20"/></radialGradient>
+              <radialGradient id="d1b" cx="42%" cy="35%" r="70%"><stop offset="0" stop-color="#e3a878"/><stop offset="1" stop-color="#7a3d1f"/></radialGradient></defs>
+              <rect width="300" height="250" fill="url(#d1bg)"/>
+              <ellipse cx="150" cy="150" rx="112" ry="60" fill="url(#d1b)"/>
+              <ellipse cx="150" cy="145" rx="88" ry="46" fill="#c2542f"/>
+              <circle cx="126" cy="138" r="14" fill="#8a2e1d"/><circle cx="160" cy="150" r="16" fill="#93321f"/><circle cx="180" cy="132" r="12" fill="#8a2e1d"/>
+              <g fill="#5d8f2f"><ellipse cx="112" cy="122" rx="4" ry="2.4" transform="rotate(20 112 122)"/><ellipse cx="196" cy="128" rx="4" ry="2.4" transform="rotate(-25 196 128)"/></g>
+            </svg>
+          </div>
+          <div class="dish-body"><div class="row"><h3>Rogan Josh</h3></div><span class="local">Mutton in Kashmiri red gravy</span><p>Tender mutton braised in a deep red gravy of Kashmiri chilli, fennel and ginger.</p></div>
+        </article>
+
+        <article class="dish-card reveal">
+          <div class="dish-media"><span class="dish-tag">Signature</span>
+            <svg viewBox="0 0 300 250" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+              <defs><radialGradient id="d2bg" cx="55%" cy="30%" r="75%"><stop offset="0" stop-color="#2a5a45"/><stop offset="1" stop-color="#0f2a20"/></radialGradient>
+              <radialGradient id="d2b" cx="42%" cy="35%" r="70%"><stop offset="0" stop-color="#efe0c4"/><stop offset="1" stop-color="#c9a96f"/></radialGradient></defs>
+              <rect width="300" height="250" fill="url(#d2bg)"/>
+              <ellipse cx="150" cy="150" rx="110" ry="58" fill="url(#d2b)"/>
+              <circle cx="118" cy="140" r="28" fill="#f4ead2"/><circle cx="158" cy="150" r="32" fill="#efe0c4"/><circle cx="192" cy="132" r="24" fill="#f4ead2"/>
+              <circle cx="118" cy="140" r="28" fill="none" stroke="#c9a96f" stroke-width="2" opacity=".6"/>
+              <circle cx="158" cy="150" r="32" fill="none" stroke="#c9a96f" stroke-width="2" opacity=".6"/>
+              <g fill="#5d8f2f"><ellipse cx="140" cy="118" rx="4" ry="2.4" transform="rotate(15 140 118)"/></g>
+            </svg>
+          </div>
+          <div class="dish-body"><div class="row"><h3>Gushtaba</h3></div><span class="local">Pounded mutton in yogurt gravy</span><p>Hand-pounded mutton dumplings simmered in a velvety yogurt gravy — the finale of a Wazwan.</p></div>
+        </article>
+
+        <article class="dish-card reveal">
+          <div class="dish-media">
+            <svg viewBox="0 0 300 250" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+              <defs><radialGradient id="d3bg" cx="45%" cy="35%" r="75%"><stop offset="0" stop-color="#2a5a45"/><stop offset="1" stop-color="#0f2a20"/></radialGradient>
+              <linearGradient id="d3rib" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#b8652e"/><stop offset="1" stop-color="#5e2812"/></linearGradient></defs>
+              <rect width="300" height="250" fill="url(#d3bg)"/>
+              <ellipse cx="150" cy="160" rx="110" ry="52" fill="#3a2010" opacity=".5"/>
+              <g transform="translate(150 140)">
+                <rect x="-70" y="-18" width="140" height="36" rx="15" fill="url(#d3rib)"/>
+                <rect x="-52" y="-10" width="5" height="20" rx="2.5" fill="#f3d3a8" opacity=".7"/>
+                <rect x="-20" y="-11" width="5" height="22" rx="2.5" fill="#f3d3a8" opacity=".7"/>
+                <rect x="12" y="-10" width="5" height="20" rx="2.5" fill="#f3d3a8" opacity=".7"/>
+                <rect x="42" y="-11" width="5" height="22" rx="2.5" fill="#f3d3a8" opacity=".7"/>
+              </g>
+            </svg>
+          </div>
+          <div class="dish-body"><div class="row"><h3>Tabak Maaz</h3></div><span class="local">Fried lamb ribs</span><p>Lamb ribs simmered in milk and whole spices, then fried in ghee until crisp.</p></div>
+        </article>
+
+        <article class="dish-card reveal">
+          <div class="dish-media"><span class="dish-tag">Must Try</span>
+            <svg viewBox="0 0 300 250" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+              <defs><radialGradient id="d4bg" cx="50%" cy="35%" r="75%"><stop offset="0" stop-color="#2a5a45"/><stop offset="1" stop-color="#0f2a20"/></radialGradient></defs>
+              <rect width="300" height="250" fill="url(#d4bg)"/>
+              <ellipse cx="150" cy="185" rx="60" ry="10" fill="#000" opacity=".2"/>
+              <path d="M108 90c30-10 55-10 84 0 6 40-6 90-42 96-36-6-48-56-42-96z" fill="#c9973f" opacity=".9"/>
+              <ellipse cx="150" cy="120" rx="34" ry="18" fill="#f4c35a"/>
+              <ellipse cx="150" cy="118" rx="4" ry="1.6" fill="#fff4dc"/>
+              <ellipse cx="140" cy="120" rx="3" ry="1.2" fill="#fff4dc"/>
+              <g fill="none" stroke="#e6c179" stroke-width="2.2" stroke-linecap="round" opacity=".6">
+                <path d="M132 76c-8-12 8-18 0-30"/><path d="M150 70c-8-12 8-18 0-30"/><path d="M168 76c-8-12 8-18 0-30"/>
+              </g>
+            </svg>
+          </div>
+          <div class="dish-body"><div class="row"><h3>Kahwa</h3></div><span class="local">Saffron green tea</span><p>Green tea brewed with saffron, cardamom and cinnamon, topped with slivered almonds.</p></div>
+        </article>
+
+        <article class="dish-card reveal">
+          <div class="dish-media">
+            <svg viewBox="0 0 300 250" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+              <defs><radialGradient id="d5bg" cx="45%" cy="35%" r="75%"><stop offset="0" stop-color="#2a5a45"/><stop offset="1" stop-color="#0f2a20"/></radialGradient>
+              <radialGradient id="d5b" cx="42%" cy="35%" r="70%"><stop offset="0" stop-color="#f4d27c"/><stop offset="1" stop-color="#c98a1c"/></radialGradient></defs>
+              <rect width="300" height="250" fill="url(#d5bg)"/>
+              <ellipse cx="150" cy="150" rx="108" ry="56" fill="url(#d5b)"/>
+              <circle cx="122" cy="140" r="18" fill="#e8b23a"/><circle cx="152" cy="148" r="20" fill="#dba52c"/><circle cx="184" cy="134" r="16" fill="#e8b23a"/>
+              <g fill="#5d8f2f"><ellipse cx="140" cy="118" rx="4" ry="2.4" transform="rotate(15 140 118)"/><ellipse cx="176" cy="116" rx="4" ry="2.4" transform="rotate(-10 176 116)"/></g>
+            </svg>
+          </div>
+          <div class="dish-body"><div class="row"><h3>Kashmiri Dum Aloo</h3></div><span class="local">Baby potatoes, yogurt gravy</span><p>Baby potatoes fried and simmered in a yogurt gravy of Kashmiri chilli and fennel.</p></div>
+        </article>
+
+        <article class="dish-card reveal">
+          <div class="dish-media">
+            <svg viewBox="0 0 300 250" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+              <defs><radialGradient id="d6bg" cx="50%" cy="35%" r="75%"><stop offset="0" stop-color="#2a5a45"/><stop offset="1" stop-color="#0f2a20"/></radialGradient></defs>
+              <rect width="300" height="250" fill="url(#d6bg)"/>
+              <ellipse cx="150" cy="160" rx="60" ry="60" fill="#f6efe0"/>
+              <ellipse cx="150" cy="160" rx="60" ry="60" fill="none" stroke="#d9c6a4" stroke-width="2"/>
+              <circle cx="150" cy="150" r="6" fill="#e6c179"/>
+              <g fill="#d9a066"><ellipse cx="118" cy="176" rx="8" ry="4.4" transform="rotate(-25 118 176)"/><ellipse cx="182" cy="178" rx="8" ry="4.4" transform="rotate(20 182 178)"/></g>
+            </svg>
+          </div>
+          <div class="dish-body"><div class="row"><h3>Phirni</h3></div><span class="local">Saffron rice pudding</span><p>Chilled ground-rice pudding with cardamom and saffron, set in clay bowls.</p></div>
+        </article>
+      </div>
+
+      <div class="dishes-cta reveal">
+        <p>25+ dishes across Wazwan classics, vegetarian mains, breads and desserts.</p>
+        <!-- MENU: link this to a PDF or page of the full menu once available -->
+        <a href="#visit" class="btn btn-gold">Ask About Our Full Menu <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ GALLERY ============ -->
+  <section class="section gallery" id="gallery">
+    <div class="wrap">
+      <div class="section-head center reveal">
+        <span class="eyebrow">Gallery</span>
+        <h2>A taste of the table</h2>
+        <p>Moments from the kitchen and the trami — cooked slow, plated with care.</p>
+      </div>
+
+      <div class="gallery-grid">
+        <div class="gallery-item big reveal-scale" aria-hidden="true">
+          <svg viewBox="0 0 500 400" preserveAspectRatio="xMidYMid slice">
+            <defs><radialGradient id="g1" cx="42%" cy="32%" r="75%"><stop offset="0" stop-color="#7a3d1f"/><stop offset="1" stop-color="#2a150a"/></radialGradient></defs>
+            <rect width="500" height="400" fill="url(#g1)"/>
+            <circle cx="250" cy="210" r="150" fill="#c2792f" opacity=".9"/>
+            <ellipse cx="250" cy="200" rx="118" ry="40" fill="#f1e2c6"/>
+            <g stroke="#c2542f" stroke-width="18" stroke-linecap="round"><path d="M170 190 L330 210"/><path d="M170 210 L330 190"/></g>
+            <circle cx="250" cy="198" r="20" fill="#3e2a12"/>
+          </svg>
+          <div class="gallery-cap"><b>The Trami</b><span>Shared, family style</span></div>
+        </div>
+        <div class="gallery-item reveal-scale" aria-hidden="true">
+          <svg viewBox="0 0 300 300" preserveAspectRatio="xMidYMid slice">
+            <defs><radialGradient id="g2" cx="45%" cy="30%" r="75%"><stop offset="0" stop-color="#c2792f"/><stop offset="1" stop-color="#2a150a"/></radialGradient></defs>
+            <rect width="300" height="300" fill="url(#g2)"/>
+            <circle cx="150" cy="170" r="26" fill="#f4c35a"/>
+          </svg>
+          <div class="gallery-cap"><b>Kahwa</b><span>Poured hot</span></div>
+        </div>
+        <div class="gallery-item reveal-scale" aria-hidden="true">
+          <svg viewBox="0 0 300 300" preserveAspectRatio="xMidYMid slice">
+            <defs><radialGradient id="g3" cx="55%" cy="35%" r="75%"><stop offset="0" stop-color="#8a4623"/><stop offset="1" stop-color="#20120a"/></radialGradient></defs>
+            <rect width="300" height="300" fill="url(#g3)"/>
+            <ellipse cx="150" cy="180" rx="90" ry="40" fill="#c2542f"/>
+          </svg>
+          <div class="gallery-cap"><b>Rogan Josh</b><span>Simmered for hours</span></div>
+        </div>
+        <div class="gallery-item reveal-scale" aria-hidden="true">
+          <svg viewBox="0 0 300 300" preserveAspectRatio="xMidYMid slice">
+            <defs><radialGradient id="g4" cx="45%" cy="30%" r="75%"><stop offset="0" stop-color="#3a6b52"/><stop offset="1" stop-color="#0f2a20"/></radialGradient></defs>
+            <rect width="300" height="300" fill="url(#g4)"/>
+            <rect x="90" y="120" width="120" height="70" rx="14" fill="#e8dcc0"/>
+          </svg>
+          <div class="gallery-cap"><b>Girda &amp; Chai</b><span>Fresh from the kandur</span></div>
+        </div>
+        <div class="gallery-item reveal-scale" aria-hidden="true">
+          <svg viewBox="0 0 300 300" preserveAspectRatio="xMidYMid slice">
+            <defs><radialGradient id="g5" cx="50%" cy="35%" r="75%"><stop offset="0" stop-color="#7a3d1f"/><stop offset="1" stop-color="#20120a"/></radialGradient></defs>
+            <rect width="300" height="300" fill="url(#g5)"/>
+            <ellipse cx="150" cy="170" rx="80" ry="44" fill="#efe0c4"/>
+          </svg>
+          <div class="gallery-cap"><b>The Kitchen</b><span>Where it all begins</span></div>
+        </div>
+        <div class="gallery-item reveal-scale" aria-hidden="true">
+          <svg viewBox="0 0 300 300" preserveAspectRatio="xMidYMid slice">
+            <defs><radialGradient id="g6" cx="45%" cy="30%" r="75%"><stop offset="0" stop-color="#2a5a45"/><stop offset="1" stop-color="#0f2a20"/></radialGradient></defs>
+            <rect width="300" height="300" fill="url(#g6)"/>
+            <circle cx="150" cy="170" r="70" fill="#f6efe0"/>
+          </svg>
+          <div class="gallery-cap"><b>Phirni</b><span>A sweet finish</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ REVIEWS ============ -->
+  <section class="section reviews on-dark" id="reviews">
+    <div class="paisley-bg" aria-hidden="true"></div>
+    <div class="wrap" style="position:relative">
+      <div class="section-head reveal">
+        <span class="eyebrow">Guest reviews</span>
+        <h2>Loved by our neighbours</h2>
+        <div class="reviews-summary">
+          <span class="big-rating">4.7</span>
+          <div>
+            <div class="stars-row" aria-hidden="true"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div>
+            <div class="meta">Average rating from 46 Google reviews</div>
+          </div>
+        </div>
+        <p>A sample of what guests say — see all reviews on Google.</p>
+      </div>
+
+      <div class="review-grid">
+        <!-- REVIEW: illustrative placeholder — replace with real, permissioned Google reviews -->
+        <div class="review-card reveal">
+          <svg class="quote-mark" aria-hidden="true"><use href="#i-quote"/></svg>
+          <div class="stars" aria-hidden="true"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div>
+          <p class="quote">"The Rogan Josh tasted exactly like my grandmother's — rich, slow-cooked, and full of flavour. This is the real Kashmiri Wazwan experience."</p>
+          <div class="review-who">
+            <div class="review-avatar" style="background:var(--gold-lt)">A</div>
+            <div><b>Aadil M.</b><span>Local Guide · Kulgam</span></div>
+          </div>
+        </div>
+        <div class="review-card reveal">
+          <svg class="quote-mark" aria-hidden="true"><use href="#i-quote"/></svg>
+          <div class="stars" aria-hidden="true"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div>
+          <p class="quote">"We booked the full trami for a family gathering and it was outstanding — Gushtaba was the highlight. Warm service, generous portions."</p>
+          <div class="review-who">
+            <div class="review-avatar" style="background:#e6c179">S</div>
+            <div><b>Sara K.</b><span>Google review</span></div>
+          </div>
+        </div>
+        <div class="review-card reveal">
+          <svg class="quote-mark" aria-hidden="true"><use href="#i-quote"/></svg>
+          <div class="stars" aria-hidden="true"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div>
+          <p class="quote">"Best Kahwa in Kulgam, hands down. The whole place feels like a proper Kashmiri darbar — cosy, welcoming and never rushed."</p>
+          <div class="review-who">
+            <div class="review-avatar" style="background:var(--maroon-lt)">T</div>
+            <div><b>Tariq B.</b><span>Google review</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ VISIT ============ -->
+  <section class="section visit" id="visit">
+    <div class="wrap visit-grid">
+      <div class="visit-card reveal">
+        <span class="eyebrow">Visit us</span>
+        <h2>Reserve your table.</h2>
+
+        <div class="info-row">
+          <svg aria-hidden="true"><use href="#i-pin"/></svg>
+          <div><b>Address</b><a href="https://www.google.com/maps/search/?api=1&amp;query=Koshur+Darbar+Restaurant+Town+Plaza+Kulgam" target="_blank" rel="noopener">Ground Floor, Town Plaza<br>Kulgam, Jammu &amp; Kashmir 192231</a></div>
+        </div>
+
+        <!-- HOURS: update once confirmed with the restaurant -->
+        <div class="info-row">
+          <svg aria-hidden="true"><use href="#i-clock"/></svg>
+          <div><b>Hours</b>
+            <ul class="hours-list">
+              <li><span>Lunch &amp; dinner, daily</span><a href="https://www.google.com/maps/search/?api=1&amp;query=Koshur+Darbar+Restaurant+Kulgam" target="_blank" rel="noopener">Today's hours on Google</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- PHONE: replace with the confirmed number in both spots -->
+        <div class="info-row">
+          <svg aria-hidden="true"><use href="#i-phone"/></svg>
+          <div><b>Call or WhatsApp</b><a href="tel:+91XXXXXXXXXX">+91 XXXXX XXXXX</a></div>
+        </div>
+
+        <div class="info-row">
+          <svg aria-hidden="true"><use href="#i-star"/></svg>
+          <div><b>Guests say</b><a href="https://www.google.com/maps/search/?api=1&amp;query=Koshur+Darbar+Restaurant+Kulgam" target="_blank" rel="noopener">4.7 ★ from 46 reviews · Read them on Google</a></div>
+        </div>
+
+        <div class="visit-actions">
+          <a class="btn btn-gold" href="tel:+91XXXXXXXXXX"><svg aria-hidden="true"><use href="#i-phone"/></svg> Call Now</a>
+          <a class="btn btn-line" href="https://www.google.com/maps/dir/?api=1&amp;destination=Koshur+Darbar+Restaurant+Town+Plaza+Kulgam" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-dir"/></svg> Get Directions</a>
+        </div>
+      </div>
+
+      <div class="map-wrap reveal">
+        <a class="map-fallback" href="https://www.google.com/maps/search/?api=1&amp;query=Koshur+Darbar+Restaurant+Town+Plaza+Kulgam" target="_blank" rel="noopener">
+          <svg aria-hidden="true"><use href="#i-pin"/></svg>
+          <b>Town Plaza, Kulgam</b>
+          <span>Open in Google Maps →</span>
+        </a>
+        <iframe title="Map showing Koshur Darbar, Town Plaza, Kulgam" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          src="https://www.google.com/maps?q=Koshur+Darbar+Restaurant,+Town+Plaza,+Kulgam,+Jammu+and+Kashmir+192231&amp;output=embed"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CTA BANNER ============ -->
+  <section class="cta-banner on-dark">
+    <div class="paisley-bg" aria-hidden="true"></div>
+    <div class="wrap cta-banner-inner">
+      <h2>Hungry for the real taste of Kashmir?</h2>
+      <div class="actions">
+        <a href="tel:+91XXXXXXXXXX" class="btn btn-gold"><svg aria-hidden="true"><use href="#i-phone"/></svg> Call Now</a>
+        <a href="#visit" class="btn btn-line">Book a Table</a>
+        <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Koshur+Darbar+Restaurant+Town+Plaza+Kulgam" target="_blank" rel="noopener" class="btn btn-line"><svg aria-hidden="true"><use href="#i-dir"/></svg> Get Directions</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="#top" class="brand"><svg aria-hidden="true" style="width:34px;height:34px;color:var(--gold-lt)"><use href="#chinar"/></svg><span class="brand-name">Koshur Darbar</span></a>
+        <p>Authentic Kashmiri cuisine and Wazwan, served with heart in the heart of Kulgam.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Instagram"><svg aria-hidden="true"><use href="#i-insta"/></svg></a>
+          <a href="#" aria-label="Facebook"><svg aria-hidden="true"><use href="#i-fb"/></svg></a>
+          <a href="tel:+91XXXXXXXXXX" aria-label="WhatsApp"><svg aria-hidden="true"><use href="#i-whatsapp"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <h4>Explore</h4>
+        <ul><li><a href="#about">About</a></li><li><a href="#dishes">Menu</a></li><li><a href="#gallery">Gallery</a></li><li><a href="#reviews">Reviews</a></li></ul>
+      </div>
+      <div class="footer-links">
+        <h4>Visit</h4>
+        <ul><li>Ground Floor, Town Plaza</li><li>Kulgam, J&amp;K 192231</li><li><a href="https://www.google.com/maps/dir/?api=1&amp;destination=Koshur+Darbar+Restaurant+Town+Plaza+Kulgam" target="_blank" rel="noopener">Directions →</a></li></ul>
+      </div>
+      <div class="footer-links">
+        <h4>Contact</h4>
+        <ul><li><a href="tel:+91XXXXXXXXXX">Call Now</a></li><li><a href="#visit">Book a Table</a></li><li><a href="https://www.google.com/maps/search/?api=1&amp;query=Koshur+Darbar+Restaurant+Kulgam" target="_blank" rel="noopener">Google Reviews</a></li></ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year">2026</span> Koshur Darbar Restaurant</span>
+      <span>Crafted with saffron &amp; patience</span>
+    </div>
+  </div>
+</footer>
+
+<div class="mobile-cta-bar" aria-hidden="false">
+  <a href="tel:+91XXXXXXXXXX" class="btn btn-gold btn-sm"><svg aria-hidden="true"><use href="#i-phone"/></svg> Call</a>
+  <a href="#visit" class="btn btn-line btn-sm">Book a Table</a>
+  <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Koshur+Darbar+Restaurant+Town+Plaza+Kulgam" target="_blank" rel="noopener" class="btn btn-line btn-sm"><svg aria-hidden="true"><use href="#i-dir"/></svg> Directions</a>
+</div>
+
+<script>
+  document.documentElement.classList.add('js');
+
+  const header = document.querySelector('.site-header');
+  const onScroll = () => header.classList.toggle('scrolled', window.scrollY > 20);
+  onScroll();
+  window.addEventListener('scroll', onScroll, { passive: true });
+
+  const toggle = document.querySelector('.menu-toggle');
+  const links = document.getElementById('nav-links');
+  const setMenu = (open) => {
+    links.classList.toggle('open', open);
+    header.classList.toggle('menu-open', open);
+    toggle.setAttribute('aria-expanded', String(open));
+    toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+  };
+  toggle.addEventListener('click', () => setMenu(!links.classList.contains('open')));
+  links.addEventListener('click', (e) => { if (e.target.closest('a')) setMenu(false); });
+
+  const reveals = document.querySelectorAll('.reveal, .reveal-scale');
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((entry, i) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => entry.target.classList.add('in'), (i % 3) * 90);
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
+    reveals.forEach((el) => io.observe(el));
+  } else {
+    reveals.forEach((el) => el.classList.add('in'));
+  }
+
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
