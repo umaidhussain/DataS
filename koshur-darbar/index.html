@@ -1,0 +1,993 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Koshur Darbar · Kashmiri Restaurant in Kulgam</title>
+<meta name="description" content="Koshur Darbar — traditional Kashmiri food and Wazwan at Town Plaza, Kulgam, Jammu & Kashmir. Rogan Josh, Gushtaba, Rista, Yakhni, Kahwa and more.">
+<meta name="theme-color" content="#23150f">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath fill='%23c2492b' d='M50 5 58 22 66 16 64 34 86 26 78 42 90 48 70 58 76 70 58 64 54 78 52 78 52 95 48 95 48 78 46 78 42 64 24 70 30 58 10 48 22 42 14 26 36 34 34 16 42 22Z'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..600&family=DM+Sans:opsz,wght@9..40,400..700&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "Koshur Darbar Restaurant",
+  "servesCuisine": ["Kashmiri", "Wazwan"],
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Ground Floor, Town Plaza",
+    "addressLocality": "Kulgam",
+    "addressRegion": "Jammu and Kashmir",
+    "postalCode": "192231",
+    "addressCountry": "IN"
+  }
+}
+</script>
+
+<style>
+  :root {
+    --walnut: #23150f;
+    --walnut-2: #2f1d14;
+    --walnut-3: #3d271b;
+    --cream: #f6eee1;
+    --paper: #fbf6ee;
+    --ink: #24170f;
+    --muted: #6d5646;
+    --line: #e4d6c2;
+    --copper: #b8683a;
+    --copper-lt: #e2a472;
+    --saffron: #e09a2b;
+    --chinar: #c2492b;
+    --veg: #2f7d3b;
+    --nonveg: #9a2d1d;
+
+    --display: "Fraunces", Georgia, "Times New Roman", serif;
+    --body: "DM Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+
+    --wrap: 1180px;
+    --gutter: clamp(16px, 4vw, 40px);
+    --radius: 14px;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+  html { scroll-behavior: smooth; scroll-padding-top: 76px; }
+  body {
+    margin: 0;
+    font-family: var(--body);
+    font-size: 17px;
+    line-height: 1.6;
+    color: var(--ink);
+    background: var(--paper);
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+  img, svg { display: block; max-width: 100%; }
+  a { color: inherit; }
+  h1, h2, h3 { font-family: var(--display); font-weight: 500; line-height: 1.1; margin: 0; letter-spacing: -0.01em; }
+  p { margin: 0; }
+
+  .wrap { width: 100%; max-width: var(--wrap); margin: 0 auto; padding: 0 var(--gutter); }
+
+  .eyebrow {
+    display: inline-flex; align-items: center; gap: 10px;
+    font-size: 12.5px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--copper);
+  }
+  .eyebrow::before { content: ""; width: 26px; height: 1px; background: currentColor; }
+
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+    padding: 14px 24px; border-radius: 999px;
+    font: 600 15px/1 var(--body); letter-spacing: 0.01em; text-decoration: none;
+    border: 1px solid transparent; cursor: pointer;
+    transition: transform .2s ease, background-color .2s ease, color .2s ease, border-color .2s ease;
+  }
+  .btn:hover { transform: translateY(-1px); }
+  .btn svg { width: 18px; height: 18px; flex: none; }
+  .btn-primary { background: var(--saffron); color: var(--walnut); }
+  .btn-primary:hover { background: #eeae45; }
+  .btn-ghost { border-color: rgba(246, 238, 225, .35); color: var(--cream); }
+  .btn-ghost:hover { border-color: var(--cream); }
+  .btn-dark { background: var(--walnut); color: var(--cream); }
+  .btn-dark:hover { background: var(--walnut-3); }
+
+  :focus-visible { outline: 2px solid var(--saffron); outline-offset: 3px; border-radius: 6px; }
+
+  /* ---------- Header ---------- */
+  .site-header {
+    position: fixed; inset: 0 0 auto 0; z-index: 50;
+    transition: background-color .3s ease, box-shadow .3s ease;
+  }
+  .site-header.scrolled { background: rgba(35, 21, 15, .94); backdrop-filter: blur(10px); box-shadow: 0 1px 0 rgba(246,238,225,.08); }
+  .nav { display: flex; align-items: center; justify-content: space-between; height: 72px; }
+  .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; color: var(--cream); }
+  .brand svg { width: 30px; height: 30px; color: var(--chinar); }
+  .brand-name { font-family: var(--display); font-size: 22px; font-weight: 500; letter-spacing: 0.01em; line-height: 1; }
+  .brand-name small { display: block; font-family: var(--body); font-size: 10.5px; letter-spacing: 0.24em; text-transform: uppercase; color: var(--copper-lt); margin-top: 5px; font-weight: 600; }
+  .nav-links { display: flex; align-items: center; gap: 32px; list-style: none; margin: 0; padding: 0; }
+  .nav-links a { color: rgba(246, 238, 225, .82); text-decoration: none; font-size: 15px; font-weight: 500; transition: color .2s; }
+  .nav-links a:hover { color: var(--cream); }
+  .nav-links .btn { padding: 11px 20px; color: var(--walnut); }
+  .menu-toggle { display: none; background: none; border: 0; color: var(--cream); padding: 8px; margin-right: -8px; cursor: pointer; }
+  .menu-toggle svg { width: 26px; height: 26px; }
+
+  /* ---------- Hero ---------- */
+  .hero {
+    position: relative; overflow: hidden;
+    background:
+      radial-gradient(1100px 600px at 78% 45%, rgba(184, 104, 58, .28), transparent 60%),
+      var(--walnut);
+    color: var(--cream);
+    padding: 132px 0 96px;
+  }
+  .paisley-bg {
+    position: absolute; inset: 0; opacity: .07; pointer-events: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cg fill='none' stroke='%23f6eee1' stroke-width='1.4'%3E%3Cpath d='M34 96c-20-3-25-27-12-43 10-12 26-14 30-30 9 16 9 37-3 54-5 8-9 17-15 19z'/%3E%3Cpath d='M35 86c-11-2-14-15-7-24 6-7 15-8 18-17 5 9 5 21-2 30-3 5-5 10-9 11z'/%3E%3Ccircle cx='41' cy='67' r='3'/%3E%3Cpath d='M94 36c-12-2-15-16-7-25 6-7 15-8 17-17 5 9 5 21-2 31-3 5-5 10-8 11z' transform='translate(0 20)'/%3E%3C/g%3E%3C/svg%3E");
+    background-size: 120px 120px;
+  }
+  .hero-grid { position: relative; display: grid; grid-template-columns: 1.05fr 1fr; gap: 48px; align-items: center; }
+  .hero h1 { font-size: clamp(44px, 6.4vw, 84px); font-weight: 400; margin: 22px 0 24px; }
+  .hero h1 em { font-style: italic; color: var(--copper-lt); font-weight: 300; }
+  .hero .lede { font-size: clamp(17px, 1.6vw, 19px); color: rgba(246, 238, 225, .78); max-width: 32em; }
+  .hero .eyebrow { color: var(--copper-lt); }
+  .hero-actions { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 36px; }
+  .hero-meta { display: flex; flex-wrap: wrap; gap: 28px; margin-top: 48px; padding-top: 28px; border-top: 1px solid rgba(246, 238, 225, .12); }
+  .hero-meta div { font-size: 14px; color: rgba(246, 238, 225, .65); }
+  .hero-meta strong { display: block; font-family: var(--display); font-weight: 500; font-size: 26px; color: var(--cream); line-height: 1.1; margin-bottom: 2px; }
+  .stars { color: var(--saffron); letter-spacing: 2px; font-size: 15px; }
+
+  .trami-wrap { position: relative; justify-self: center; width: min(100%, 520px); aspect-ratio: 1; }
+  .trami-wrap > svg { width: 100%; height: 100%; filter: drop-shadow(0 30px 50px rgba(0,0,0,.45)); }
+  .trami-ring { transform-origin: 200px 200px; animation: spin 120s linear infinite; }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  .trami-label {
+    position: absolute; transform: translate(-50%, -50%);
+    font-size: 11.5px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase;
+    color: var(--cream); display: flex; align-items: center; gap: 8px; white-space: nowrap;
+    padding: 7px 13px 7px 11px; border-radius: 999px;
+    background: rgba(35, 21, 15, .88); border: 1px solid rgba(226, 164, 114, .45);
+    box-shadow: 0 6px 18px rgba(0,0,0,.3);
+  }
+  .trami-label::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--saffron); box-shadow: 0 0 0 3px rgba(224,154,43,.25); }
+  .trami-label.l1 { left: 50%; top: 5%; }
+  .trami-label.l2 { left: 84%; top: 84%; }
+  .trami-label.l3 { left: 6%; top: 50%; }
+
+  /* ---------- Marquee ---------- */
+  .marquee { background: var(--chinar); color: var(--cream); overflow: hidden; padding: 16px 0; }
+  .marquee-track { display: flex; width: max-content; animation: scroll 38s linear infinite; }
+  .marquee-track span { font-family: var(--display); font-style: italic; font-size: 22px; padding: 0 22px; white-space: nowrap; display: inline-flex; align-items: center; gap: 44px; }
+  .marquee-track span::after { content: ""; width: 8px; height: 8px; background: var(--saffron); transform: rotate(45deg); }
+  @keyframes scroll { to { transform: translateX(-50%); } }
+
+  /* ---------- Sections ---------- */
+  section { position: relative; }
+  .section { padding: clamp(80px, 11vw, 136px) 0; }
+  .section-head { max-width: 660px; margin-bottom: 56px; }
+  .section-head h2 { font-size: clamp(34px, 4.4vw, 56px); margin-top: 16px; }
+  .section-head p { margin-top: 18px; color: var(--muted); font-size: 18px; }
+  .center { text-align: center; margin-left: auto; margin-right: auto; }
+  .center .eyebrow::after { content: ""; width: 26px; height: 1px; background: currentColor; }
+
+  /* About */
+  .about-grid { display: grid; grid-template-columns: 1fr 1.1fr; gap: clamp(40px, 7vw, 96px); align-items: center; }
+  .arch {
+    position: relative; aspect-ratio: 4 / 5; border-radius: 999px 999px 18px 18px; overflow: hidden;
+    background: linear-gradient(180deg, #3a2419 0%, var(--walnut) 100%);
+    box-shadow: 0 30px 60px -30px rgba(35,21,15,.5);
+  }
+  .arch::after { content: ""; position: absolute; inset: 14px; border: 1px solid rgba(226,164,114,.45); border-radius: 999px 999px 10px 10px; pointer-events: none; }
+  .arch svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+  .about-copy h2 { font-size: clamp(34px, 4.4vw, 54px); margin: 16px 0 24px; }
+  .about-copy p + p { margin-top: 18px; }
+  .about-copy p { color: var(--muted); }
+  .about-copy .big { font-family: var(--display); font-size: clamp(21px, 2.2vw, 25px); line-height: 1.45; color: var(--ink); font-weight: 400; }
+  .word-defs { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-top: 36px; }
+  .word-def { padding: 20px 22px; border: 1px solid var(--line); border-radius: var(--radius); background: #fff; }
+  .word-def b { font-family: var(--display); font-size: 22px; font-weight: 500; display: block; }
+  .word-def i { font-size: 13.5px; color: var(--copper); font-style: normal; letter-spacing: .04em; }
+  .word-def span { display: block; margin-top: 6px; font-size: 15px; color: var(--muted); line-height: 1.5; }
+
+  /* Menu */
+  .menu-section { background: var(--cream); }
+  .menu-tabs { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 44px; justify-content: center; }
+  .menu-tab {
+    font: 600 14.5px/1 var(--body); padding: 12px 20px; border-radius: 999px; cursor: pointer;
+    border: 1px solid var(--line); background: var(--paper); color: var(--muted);
+    transition: all .2s ease;
+  }
+  .menu-tab:hover { color: var(--ink); border-color: #cdb89c; }
+  .menu-tab[aria-selected="true"] { background: var(--walnut); color: var(--cream); border-color: var(--walnut); }
+  .menu-tabs { display: none; }
+  .js .menu-tabs { display: flex; }
+  .js .menu-cat[hidden] { display: none; }
+  .menu-cat + .menu-cat { margin-top: 56px; }
+  .js .menu-cat + .menu-cat { margin-top: 0; }
+  .menu-cat-title { font-size: 28px; margin-bottom: 8px; }
+  .menu-cat-note { color: var(--muted); font-size: 15.5px; margin-bottom: 28px; }
+  .js .menu-cat-title { display: none; }
+  .js .menu-cat-note { text-align: center; }
+  .dishes { display: grid; grid-template-columns: 1fr 1fr; gap: 0 56px; list-style: none; margin: 0; padding: 0; }
+  .dish { padding: 22px 0; border-bottom: 1px dashed #d8c7ad; }
+  .dish-head { display: flex; align-items: baseline; gap: 12px; }
+  .dish h3 { font-size: 22px; font-weight: 500; }
+  .dish .local { font-family: var(--display); font-style: italic; color: var(--copper); font-size: 15px; }
+  .dish .dots { flex: 1; border-bottom: 1px dotted #c9b395; transform: translateY(-5px); min-width: 20px; }
+  .dish-head:not(:has(.price)) .dots { visibility: hidden; }
+  .dish .price { font-family: var(--display); font-size: 19px; font-weight: 500; }
+  .dish p { color: var(--muted); font-size: 15.5px; margin-top: 6px; line-height: 1.55; }
+  .diet { width: 14px; height: 14px; border: 1.5px solid currentColor; border-radius: 3px; display: inline-grid; place-items: center; flex: none; transform: translateY(1px); }
+  .diet::after { content: ""; width: 6px; height: 6px; border-radius: 50%; background: currentColor; }
+  .diet.veg { color: var(--veg); }
+  .diet.nonveg { color: var(--nonveg); }
+  .diet.nonveg::after { border-radius: 0; width: 0; height: 0; background: none; border-left: 3.5px solid transparent; border-right: 3.5px solid transparent; border-bottom: 6px solid currentColor; }
+  .tag { font-size: 11px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--chinar); background: rgba(194,73,43,.1); padding: 4px 8px; border-radius: 6px; white-space: nowrap; transform: translateY(-2px); }
+  .menu-foot { margin-top: 44px; display: flex; flex-wrap: wrap; gap: 22px; justify-content: center; align-items: center; color: var(--muted); font-size: 14.5px; }
+  .menu-foot span { display: inline-flex; align-items: center; gap: 8px; }
+
+  /* Wazwan */
+  .wazwan { background: var(--walnut); color: var(--cream); overflow: hidden; }
+  .wazwan .section-head p { color: rgba(246,238,225,.7); }
+  .wazwan .eyebrow { color: var(--copper-lt); }
+  .ritual {
+    display: grid; grid-template-columns: auto 1fr; gap: 22px; align-items: center;
+    padding: 24px 28px; border: 1px solid rgba(226,164,114,.3); border-radius: var(--radius);
+    background: rgba(246,238,225,.03); margin-bottom: 56px; max-width: 760px;
+  }
+  .ritual svg { width: 54px; height: 54px; color: var(--copper-lt); }
+  .ritual b { font-family: var(--display); font-weight: 500; font-size: 20px; }
+  .ritual p { color: rgba(246,238,225,.72); font-size: 15.5px; margin-top: 4px; }
+  .acts { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+  .act {
+    position: relative; padding: 30px 26px 28px; border-radius: var(--radius);
+    background: linear-gradient(180deg, var(--walnut-2), rgba(47,29,20,.4));
+    border: 1px solid rgba(246,238,225,.08);
+  }
+  .act-num { font-family: var(--display); font-style: italic; font-size: 15px; color: var(--copper-lt); }
+  .act h3 { font-size: 26px; margin: 8px 0 10px; }
+  .act > p { font-size: 15px; color: rgba(246,238,225,.65); line-height: 1.5; }
+  .act ol { list-style: none; margin: 20px 0 0; padding: 18px 0 0; border-top: 1px solid rgba(246,238,225,.1); counter-reset: c; }
+  .act li { display: flex; gap: 10px; align-items: baseline; padding: 6px 0; font-size: 15.5px; }
+  .act li::before { content: ""; width: 6px; height: 6px; transform: rotate(45deg) translateY(-2px); background: var(--saffron); flex: none; }
+  .act li small { color: rgba(246,238,225,.5); font-size: 13px; margin-left: auto; text-align: right; white-space: nowrap; }
+  .act.finale { background: linear-gradient(160deg, #8f3a22, #5a2416); border-color: rgba(224,154,43,.4); }
+  .act.finale .act-num { color: var(--saffron); }
+  .act.finale > p { color: rgba(246,238,225,.8); }
+  .wazwan-cta { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 24px; margin-top: 56px; padding-top: 40px; border-top: 1px solid rgba(246,238,225,.1); }
+  .wazwan-cta p { font-family: var(--display); font-size: clamp(22px, 2.4vw, 28px); max-width: 26em; }
+
+  /* Kahwa band */
+  .kahwa { background: var(--cream); }
+  .kahwa-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(40px, 7vw, 96px); align-items: center; }
+  .kahwa-art { position: relative; aspect-ratio: 1; max-width: 460px; justify-self: center; width: 100%; }
+  .kahwa-art svg { width: 100%; height: 100%; }
+  .steam path { animation: steam 4.5s ease-in-out infinite; transform-origin: center bottom; }
+  .steam path:nth-child(2) { animation-delay: 1.4s; }
+  .steam path:nth-child(3) { animation-delay: 2.8s; }
+  @keyframes steam { 0% { opacity: 0; transform: translateY(12px); } 40% { opacity: .75; } 100% { opacity: 0; transform: translateY(-18px); } }
+  .kahwa-copy h2 { font-size: clamp(34px, 4.4vw, 54px); margin: 16px 0 22px; }
+  .kahwa-copy > p { color: var(--muted); font-size: 18px; }
+  .spices { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 28px; }
+  .spices span { padding: 9px 16px; border-radius: 999px; background: var(--paper); border: 1px solid var(--line); font-size: 14.5px; font-weight: 500; }
+  .teas { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-top: 36px; }
+  .tea { padding: 22px; border-radius: var(--radius); background: var(--paper); border: 1px solid var(--line); }
+  .tea .swatch { width: 36px; height: 36px; border-radius: 50%; margin-bottom: 14px; box-shadow: inset 0 -4px 8px rgba(0,0,0,.15); }
+  .tea b { font-family: var(--display); font-weight: 500; font-size: 21px; display: block; }
+  .tea span { color: var(--muted); font-size: 15px; display: block; margin-top: 4px; line-height: 1.5; }
+
+  /* Visit */
+  .visit-grid { display: grid; grid-template-columns: 1fr 1.25fr; gap: 28px; align-items: stretch; }
+  .visit-card { padding: clamp(28px, 4vw, 44px); border-radius: 20px; background: var(--walnut); color: var(--cream); display: flex; flex-direction: column; }
+  .visit-card h2 { font-size: clamp(32px, 4vw, 46px); margin: 16px 0 28px; }
+  .visit-card .eyebrow { color: var(--copper-lt); }
+  .info-row { display: grid; grid-template-columns: 22px 1fr; gap: 16px; padding: 18px 0; border-top: 1px solid rgba(246,238,225,.12); }
+  .info-row svg { width: 22px; height: 22px; color: var(--copper-lt); margin-top: 2px; }
+  .info-row b { display: block; font-size: 13px; letter-spacing: .12em; text-transform: uppercase; color: rgba(246,238,225,.55); font-weight: 600; margin-bottom: 4px; }
+  .info-row span, .info-row a { font-size: 17px; color: var(--cream); text-decoration: none; }
+  .info-row a:hover { text-decoration: underline; text-underline-offset: 3px; }
+  .hours { list-style: none; margin: 0; padding: 0; }
+  .hours li { display: flex; justify-content: space-between; gap: 16px; font-size: 16px; }
+  .hours li a { font-size: 16px; }
+  .hours li span:first-child { color: rgba(246,238,225,.7); }
+  .visit-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: auto; padding-top: 28px; }
+  .map { border-radius: 20px; overflow: hidden; min-height: 420px; border: 1px solid var(--line); background: var(--cream); position: relative; }
+  .map-fallback {
+    position: absolute; inset: 0; display: grid; place-content: center; justify-items: center; gap: 14px; text-align: center; padding: 24px;
+    color: var(--muted); text-decoration: none;
+    background:
+      linear-gradient(0deg, transparent 49.6%, rgba(184,104,58,.12) 49.6% 50.4%, transparent 50.4%) 0 0 / 56px 56px,
+      linear-gradient(90deg, transparent 49.6%, rgba(184,104,58,.12) 49.6% 50.4%, transparent 50.4%) 0 0 / 56px 56px,
+      var(--cream);
+  }
+  .map-fallback svg { width: 44px; height: 44px; color: var(--chinar); }
+  .map-fallback b { font-family: var(--display); font-weight: 500; font-size: 24px; color: var(--ink); }
+  .map iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; filter: sepia(.25) saturate(.9); }
+
+  /* Footer */
+  .site-footer { background: var(--walnut); color: rgba(246,238,225,.7); padding: 64px 0 36px; font-size: 15px; }
+  .footer-top { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 36px; padding-bottom: 40px; border-bottom: 1px solid rgba(246,238,225,.1); }
+  .footer-top .brand-name { font-size: 28px; }
+  .footer-top p { margin-top: 14px; max-width: 26em; }
+  .footer-links { display: flex; gap: 56px; flex-wrap: wrap; }
+  .footer-links h4 { margin: 0 0 14px; font-size: 12.5px; letter-spacing: .16em; text-transform: uppercase; color: var(--copper-lt); font-weight: 600; }
+  .footer-links ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+  .footer-links a { text-decoration: none; }
+  .footer-links a:hover { color: var(--cream); }
+  .footer-bottom { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; padding-top: 28px; font-size: 13.5px; color: rgba(246,238,225,.45); }
+
+  /* Reveal on scroll */
+  .js .reveal { opacity: 0; transform: translateY(24px); transition: opacity .8s ease, transform .8s ease; }
+  .js .reveal.in { opacity: 1; transform: none; }
+
+  /* ---------- Responsive ---------- */
+  @media (max-width: 1020px) {
+    .acts { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 900px) {
+    .hero { padding: 112px 0 72px; }
+    .hero-grid, .about-grid, .kahwa-grid, .visit-grid { grid-template-columns: 1fr; }
+    .trami-wrap { width: min(100%, 440px); margin-top: 12px; }
+    .arch { max-width: 420px; width: 100%; justify-self: center; }
+    .kahwa-art { order: -1; max-width: 360px; }
+    .dishes { grid-template-columns: 1fr; }
+    .map { min-height: 340px; }
+  }
+  @media (max-width: 760px) {
+    .menu-toggle { display: block; }
+    .nav-links {
+      position: fixed; inset: 72px 0 auto 0; flex-direction: column; align-items: stretch; gap: 0;
+      background: var(--walnut); padding: 8px var(--gutter) 24px; border-top: 1px solid rgba(246,238,225,.08);
+      transform: translateY(-8px); opacity: 0; visibility: hidden; transition: all .25s ease;
+    }
+    .nav-links.open { transform: none; opacity: 1; visibility: visible; }
+    .nav-links li a { display: block; padding: 14px 0; font-size: 18px; border-bottom: 1px solid rgba(246,238,225,.08); }
+    .nav-links li:last-child a { margin-top: 18px; border: 0; padding: 15px 20px; }
+    .site-header.menu-open { background: var(--walnut); }
+  }
+  @media (max-width: 600px) {
+    body { font-size: 16px; }
+    .acts, .word-defs, .teas { grid-template-columns: 1fr; }
+    .trami-label { font-size: 10px; padding: 6px 10px 6px 9px; }
+    .trami-label.l2 { left: 78%; }
+    .trami-label.l3 { left: 14%; }
+    .hero-meta { display: grid; grid-template-columns: repeat(3, auto); justify-content: start; gap: 18px 26px; }
+    .hero-meta div { font-size: 12.5px; line-height: 1.4; }
+    .hero-meta strong { font-size: 20px; }
+    .hero-actions .btn { flex: 1 1 auto; }
+    .ritual { grid-template-columns: 1fr; gap: 14px; padding: 22px; }
+    .dish h3 { font-size: 20px; }
+    .dish .local { display: none; }
+    .menu-tab { padding: 10px 15px; font-size: 13.5px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .trami-ring, .marquee-track, .steam path { animation: none; }
+    .js .reveal { opacity: 1; transform: none; transition: none; }
+  }
+</style>
+</head>
+<body>
+
+<!--
+  ============================================================
+  DETAILS TO CONFIRM WITH THE RESTAURANT BEFORE GOING LIVE
+  - Phone number  -> search this file for "PHONE"
+  - Opening hours -> search this file for "HOURS"
+  - Menu & prices -> the dishes below are classic Kashmiri /
+    Wazwan dishes; swap in the real menu. To show a price, add
+    <span class="price">₹000</span> as the last child of .dish-head
+  ============================================================
+-->
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="chinar" viewBox="0 0 100 100"><path fill="currentColor" d="M50 5 58 22 66 16 64 34 86 26 78 42 90 48 70 58 76 70 58 64 54 78 52 78 52 95 48 95 48 78 46 78 42 64 24 70 30 58 10 48 22 42 14 26 36 34 34 16 42 22Z"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" d="M12 21s-7-6.2-7-11.5a7 7 0 1 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5" fill="none" stroke="currentColor" stroke-width="1.7"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" d="M5 4h3.5l1.6 4.2-2.2 1.4a11 11 0 0 0 6.5 6.5l1.4-2.2L20 15.5V19a1.5 1.5 0 0 1-1.6 1.5A16 16 0 0 1 3.5 5.6 1.5 1.5 0 0 1 5 4z"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.7"/><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" d="M12 7.5V12l3 2"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" d="m12 3.5 2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 16.8l-5.2 2.8 1-5.8-4.3-4.1 5.9-.9z"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-5-5 5 5-5 5"/></symbol>
+    <symbol id="i-dir" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" d="m12 2.8 9.2 9.2-9.2 9.2L2.8 12z"/><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" d="M9 13.5V11h5.5m-2-2 2 2-2 2"/></symbol>
+  </defs>
+</svg>
+
+<header class="site-header" id="top">
+  <nav class="wrap nav" aria-label="Main">
+    <a href="#top" class="brand" aria-label="Koshur Darbar home">
+      <svg aria-hidden="true"><use href="#chinar"/></svg>
+      <span class="brand-name">Koshur Darbar<small>Kulgam · Kashmir</small></span>
+    </a>
+    <button class="menu-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#story">Our Story</a></li>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#wazwan">Wazwan</a></li>
+      <li><a href="#kahwa">Kahwa</a></li>
+      <li><a href="#visit" class="btn btn-primary">Visit Us</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <div class="paisley-bg" aria-hidden="true"></div>
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow">Kashmiri kitchen · Kulgam</span>
+        <h1>The royal table of Kashmir, <em>served&nbsp;warm.</em></h1>
+        <p class="lede">Slow-cooked Rogan Josh, silky Gushtaba and a trami piled high to share. Koshur Darbar brings the dishes of a Kashmiri Wazwan to Town Plaza, Kulgam.</p>
+        <div class="hero-actions">
+          <a href="#menu" class="btn btn-primary">Explore the menu <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          <a href="#visit" class="btn btn-ghost">Find us</a>
+        </div>
+        <div class="hero-meta">
+          <div><strong>4.4 <span class="stars" aria-hidden="true">★★★★☆</span></strong>Rated on Google</div>
+          <div><strong>Wazwan</strong>Kashmir’s great feast</div>
+          <div><strong>Town Plaza</strong>Ground floor, Kulgam</div>
+        </div>
+      </div>
+
+      <div class="trami-wrap" aria-hidden="true">
+        <svg viewBox="0 0 400 400">
+          <defs>
+            <radialGradient id="copper" cx="40%" cy="35%" r="75%">
+              <stop offset="0" stop-color="#e3a06a"/>
+              <stop offset=".55" stop-color="#b8683a"/>
+              <stop offset="1" stop-color="#7a3d1f"/>
+            </radialGradient>
+            <radialGradient id="copperIn" cx="45%" cy="40%" r="70%">
+              <stop offset="0" stop-color="#c77c4a"/>
+              <stop offset="1" stop-color="#8a4623"/>
+            </radialGradient>
+            <radialGradient id="rice" cx="42%" cy="38%" r="65%">
+              <stop offset="0" stop-color="#fffaf0"/>
+              <stop offset=".7" stop-color="#f1e5cf"/>
+              <stop offset="1" stop-color="#d9c6a4"/>
+            </radialGradient>
+            <pattern id="grains" width="14" height="14" patternUnits="userSpaceOnUse">
+              <ellipse cx="3" cy="4" rx="2.6" ry=".9" fill="#e0cfae" transform="rotate(30 3 4)"/>
+              <ellipse cx="10" cy="3" rx="2.6" ry=".9" fill="#e6d7ba" transform="rotate(-40 10 3)"/>
+              <ellipse cx="7" cy="10" rx="2.6" ry=".9" fill="#dcc9a6" transform="rotate(75 7 10)"/>
+              <ellipse cx="12.5" cy="11" rx="2.4" ry=".9" fill="#e8dbc0" transform="rotate(10 12.5 11)"/>
+            </pattern>
+            <linearGradient id="kebab" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#8e4a26"/>
+              <stop offset=".5" stop-color="#6a3017"/>
+              <stop offset="1" stop-color="#4a1f0e"/>
+            </linearGradient>
+            <radialGradient id="chicken" cx="40%" cy="35%" r="70%">
+              <stop offset="0" stop-color="#f08a3e"/>
+              <stop offset=".7" stop-color="#c8521f"/>
+              <stop offset="1" stop-color="#8e3313"/>
+            </radialGradient>
+            <linearGradient id="rib" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#b8652e"/>
+              <stop offset="1" stop-color="#6d2f12"/>
+            </linearGradient>
+          </defs>
+
+          <!-- trami -->
+          <circle cx="200" cy="200" r="192" fill="url(#copper)"/>
+          <circle cx="200" cy="200" r="192" fill="none" stroke="#5e2c14" stroke-width="2" opacity=".6"/>
+          <g class="trami-ring">
+            <circle cx="200" cy="200" r="180" fill="none" stroke="#f6c996" stroke-width="1" opacity=".55"/>
+            <circle cx="200" cy="200" r="172" fill="none" stroke="#f6c996" stroke-width="3.2" stroke-dasharray="0 10.8" stroke-linecap="round" opacity=".55"/>
+            <circle cx="200" cy="200" r="164" fill="none" stroke="#f6c996" stroke-width="1" opacity=".55"/>
+            <circle cx="200" cy="200" r="168" fill="none" stroke="#f6c996" stroke-width="6" stroke-dasharray="1 21" opacity=".3"/>
+          </g>
+          <circle cx="200" cy="200" r="156" fill="url(#copperIn)"/>
+          <ellipse cx="170" cy="150" rx="90" ry="50" fill="#fff" opacity=".06" transform="rotate(-30 170 150)"/>
+
+          <!-- rice mound -->
+          <circle cx="200" cy="206" r="122" fill="#000" opacity=".22" />
+          <circle cx="200" cy="200" r="122" fill="url(#rice)"/>
+          <circle cx="200" cy="200" r="122" fill="url(#grains)" opacity=".9"/>
+
+          <!-- seekh kebabs in an X -->
+          <g>
+            <rect x="120" y="190" width="160" height="17" rx="8.5" fill="url(#kebab)" transform="rotate(38 200 198)"/>
+            <rect x="120" y="190" width="160" height="17" rx="8.5" fill="url(#kebab)" transform="rotate(-38 200 198)"/>
+            <rect x="128" y="192" width="144" height="2.5" rx="1.25" fill="#b76a3a" opacity=".6" transform="rotate(38 200 198)"/>
+            <rect x="128" y="192" width="144" height="2.5" rx="1.25" fill="#b76a3a" opacity=".6" transform="rotate(-38 200 198)"/>
+          </g>
+
+          <!-- tabak maaz (ribs) -->
+          <g transform="translate(200 104)">
+            <rect x="-34" y="-15" width="68" height="30" rx="12" fill="url(#rib)"/>
+            <rect x="-26" y="-9" width="4" height="18" rx="2" fill="#f3d3a8" opacity=".75"/>
+            <rect x="-8" y="-10" width="4" height="20" rx="2" fill="#f3d3a8" opacity=".75"/>
+            <rect x="10" y="-9" width="4" height="18" rx="2" fill="#f3d3a8" opacity=".75"/>
+          </g>
+          <g transform="translate(200 298)">
+            <rect x="-34" y="-15" width="68" height="30" rx="12" fill="url(#rib)"/>
+            <rect x="-24" y="-9" width="4" height="18" rx="2" fill="#f3d3a8" opacity=".75"/>
+            <rect x="-6" y="-10" width="4" height="20" rx="2" fill="#f3d3a8" opacity=".75"/>
+            <rect x="12" y="-9" width="4" height="18" rx="2" fill="#f3d3a8" opacity=".75"/>
+          </g>
+
+          <!-- waza kokur (chicken halves) -->
+          <g transform="translate(106 200) rotate(-10)">
+            <path d="M-4 -34 C 22 -30, 28 -4, 22 16 C 16 34, -8 38, -18 22 C -28 6, -26 -30, -4 -34 Z" fill="url(#chicken)"/>
+            <path d="M-2 -22 C 10 -18, 14 -4, 10 8" fill="none" stroke="#ffc58f" stroke-width="2" opacity=".45" stroke-linecap="round"/>
+          </g>
+          <g transform="translate(294 200) rotate(170)">
+            <path d="M-4 -34 C 22 -30, 28 -4, 22 16 C 16 34, -8 38, -18 22 C -28 6, -26 -30, -4 -34 Z" fill="url(#chicken)"/>
+            <path d="M-2 -22 C 10 -18, 14 -4, 10 8" fill="none" stroke="#ffc58f" stroke-width="2" opacity=".45" stroke-linecap="round"/>
+          </g>
+
+          <!-- methi maaz in centre -->
+          <circle cx="200" cy="198" r="26" fill="#3e2a12"/>
+          <circle cx="200" cy="198" r="26" fill="none" stroke="#6b5222" stroke-width="3" stroke-dasharray="3 5" opacity=".8"/>
+          <circle cx="192" cy="192" r="5" fill="#5e7a2a"/>
+          <circle cx="206" cy="190" r="4" fill="#6f8c31"/>
+          <circle cx="204" cy="205" r="5" fill="#556f24"/>
+          <circle cx="193" cy="205" r="3.5" fill="#7a9636"/>
+
+          <!-- coriander & chilli garnish -->
+          <g fill="#5d8f2f">
+            <ellipse cx="150" cy="138" rx="5" ry="3" transform="rotate(30 150 138)"/>
+            <ellipse cx="256" cy="146" rx="5" ry="3" transform="rotate(-20 256 146)"/>
+            <ellipse cx="148" cy="264" rx="5" ry="3" transform="rotate(-40 148 264)"/>
+            <ellipse cx="258" cy="258" rx="5" ry="3" transform="rotate(50 258 258)"/>
+            <ellipse cx="236" cy="124" rx="4" ry="2.5" transform="rotate(10 236 124)"/>
+            <ellipse cx="164" cy="280" rx="4" ry="2.5" transform="rotate(70 164 280)"/>
+          </g>
+          <g fill="#c8321c">
+            <rect x="262" y="118" width="16" height="4" rx="2" transform="rotate(35 270 120)"/>
+            <rect x="122" y="272" width="16" height="4" rx="2" transform="rotate(-25 130 274)"/>
+          </g>
+        </svg>
+        <span class="trami-label l1">Tabak Maaz</span>
+        <span class="trami-label l2">Seekh Kabab</span>
+        <span class="trami-label l3">Waza Kokur</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ MARQUEE ============ -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>Rogan Josh</span><span>Gushtaba</span><span>Rista</span><span>Yakhni</span><span>Tabak Maaz</span><span>Aab Gosht</span><span>Nadru Yakhni</span><span>Kahwa</span><span>Noon Chai</span><span>Phirni</span>
+      <span>Rogan Josh</span><span>Gushtaba</span><span>Rista</span><span>Yakhni</span><span>Tabak Maaz</span><span>Aab Gosht</span><span>Nadru Yakhni</span><span>Kahwa</span><span>Noon Chai</span><span>Phirni</span>
+    </div>
+  </div>
+
+  <!-- ============ STORY ============ -->
+  <section class="section" id="story">
+    <div class="wrap about-grid">
+      <div class="arch reveal" aria-hidden="true">
+        <svg viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice">
+          <defs>
+            <linearGradient id="dusk" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#e7a15a"/>
+              <stop offset=".55" stop-color="#c8603a"/>
+              <stop offset="1" stop-color="#6a2c1a"/>
+            </linearGradient>
+          </defs>
+          <rect width="400" height="500" fill="url(#dusk)"/>
+          <circle cx="250" cy="170" r="46" fill="#fbd79a" opacity=".85"/>
+          <!-- Pir Panjal ridges -->
+          <path d="M0 300 L60 240 L110 270 L170 200 L230 262 L290 214 L350 256 L400 226 L400 500 L0 500Z" fill="#8a3a22"/>
+          <path d="M150 218 L170 200 L190 220 L180 216 L170 224 L160 214Z" fill="#f6e3cf" opacity=".85"/>
+          <path d="M275 226 L290 214 L305 228 L296 225 L290 232 L283 224Z" fill="#f6e3cf" opacity=".8"/>
+          <path d="M0 340 L80 290 L150 322 L220 280 L300 318 L400 284 L400 500 L0 500Z" fill="#5e2617"/>
+          <!-- chinar trees -->
+          <g fill="#a33a1f">
+            <circle cx="70" cy="330" r="46"/><circle cx="110" cy="316" r="38"/><circle cx="40" cy="352" r="34"/>
+            <circle cx="330" cy="340" r="48"/><circle cx="296" cy="322" r="34"/><circle cx="364" cy="360" r="36"/>
+          </g>
+          <g fill="#c8502a">
+            <circle cx="86" cy="310" r="22"/><circle cx="318" cy="318" r="24"/>
+          </g>
+          <!-- lake -->
+          <rect x="0" y="380" width="400" height="120" fill="#2c1810"/>
+          <path d="M40 410 H140 M210 425 H330 M90 450 H200 M250 462 H370" stroke="#e7a15a" stroke-width="2" opacity=".35" stroke-linecap="round"/>
+          <!-- shikara -->
+          <path d="M120 400 Q200 416 290 396 Q282 410 200 414 Q140 414 120 400Z" fill="#1a0e09"/>
+          <path d="M175 404 V384 H232 V402" fill="none" stroke="#1a0e09" stroke-width="4"/>
+          <path d="M168 386 Q204 368 240 386Z" fill="#1a0e09"/>
+          <path d="M296 380 L262 420" stroke="#1a0e09" stroke-width="3" stroke-linecap="round"/>
+          <!-- falling chinar leaves -->
+          <use href="#chinar" x="60" y="120" width="26" height="26" color="#f0b35e" transform="rotate(-20 73 133)"/>
+          <use href="#chinar" x="310" y="70" width="20" height="20" color="#f6c67a" transform="rotate(25 320 80)"/>
+          <use href="#chinar" x="150" y="60" width="16" height="16" color="#fbd79a" transform="rotate(10 158 68)"/>
+        </svg>
+      </div>
+      <div class="about-copy reveal">
+        <span class="eyebrow">Our story</span>
+        <h2>A darbar for the flavours of home.</h2>
+        <p class="big">In Kashmir, a good meal is never a small thing. It is a gathering: a copper trami set down between friends, steam rising from the rice, and course after course carried out by the waza.</p>
+        <p>Koshur Darbar was made for that kind of meal. We cook the dishes Kashmiri families grow up with: slow braises coloured with Kashmiri chilli and cockscomb flower, yogurt gravies scented with fennel and dried mint, and meat pounded by hand until it is silky. Then we serve them the way they are meant to be eaten, together.</p>
+        <div class="word-defs">
+          <div class="word-def"><b>Koshur</b><i>kọ́-shur · adj.</i><span>Kashmiri, in the Kashmiri language itself. The language, the people and the food.</span></div>
+          <div class="word-def"><b>Darbar</b><i>dar-bār · n.</i><span>A royal court: a place where guests are received with honour and generosity.</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ MENU ============ -->
+  <section class="section menu-section" id="menu">
+    <div class="wrap">
+      <div class="section-head center reveal">
+        <span class="eyebrow">The menu</span>
+        <h2>From the waza’s kitchen</h2>
+        <p>Classic Kashmiri dishes, cooked slowly and with care. Ask about today’s specials.</p>
+      </div>
+
+      <div class="menu-tabs" role="tablist" aria-label="Menu categories">
+        <button class="menu-tab" role="tab" aria-selected="true" aria-controls="cat-wazwan" id="tab-wazwan">Wazwan Classics</button>
+        <button class="menu-tab" role="tab" aria-selected="false" aria-controls="cat-veg" id="tab-veg">Vegetarian</button>
+        <button class="menu-tab" role="tab" aria-selected="false" aria-controls="cat-rice" id="tab-rice">Rice &amp; Breads</button>
+        <button class="menu-tab" role="tab" aria-selected="false" aria-controls="cat-sides" id="tab-sides">Chutneys</button>
+        <button class="menu-tab" role="tab" aria-selected="false" aria-controls="cat-sweet" id="tab-sweet">Tea &amp; Sweets</button>
+      </div>
+
+      <div class="menu-cat" id="cat-wazwan" role="tabpanel" aria-labelledby="tab-wazwan">
+        <h3 class="menu-cat-title">Wazwan Classics</h3>
+        <p class="menu-cat-note">The mutton and chicken dishes of a traditional Kashmiri feast.</p>
+        <ul class="dishes">
+          <li class="dish"><div class="dish-head"><span class="diet nonveg" title="Non-vegetarian"></span><h3>Rogan Josh</h3><span class="tag">Signature</span><span class="dots"></span></div><p>Tender mutton braised in a deep red gravy of Kashmiri chilli, fennel and ginger, coloured with ratan jot.</p></li>
+          <li class="dish"><div class="dish-head"><span class="diet nonveg" title="Non-vegetarian"></span><h3>Gushtaba</h3><span class="tag">Signature</span><span class="dots"></span></div><p>Hand-pounded mutton dumplings simmered in a velvety yogurt gravy. The traditional last course of a Wazwan.</p></li>
+          <li class="dish"><div class="dish-head"><span class="diet nonveg" title="Non-vegetarian"></span><h3>Rista</h3><span class="dots"></span></div><p>Soft pounded-mutton meatballs in a fiery saffron and red chilli gravy.</p></li>
+          <li class="dish"><div class="dish-head"><span class="diet nonveg" title="Non-vegetarian"></span><h3>Yakhni</h3><span class="dots"></span></div><p>Mutton cooked in a delicate yogurt gravy with fennel, cardamom and dried mint.</p></li>
+          <li class="dish"><div class="dish-head"><span class="diet nonveg" title="Non-vegetarian"></span><h3>Tabak Maaz</h3><span class="dots"></span></div><p>Lamb ribs simmered in milk and whole spices, then fried in ghee until crisp at the edges.</p></li>
+          <li class="dish"><div class="dish-head"><span class="diet nonveg" title="Non-vegetarian"></span><h3>Aab Gosht</h3><span class="dots"></span></div><p>Mutton slow-cooked in sweetened milk with green cardamom. Mild, rich and comforting.</p></li>
+          <li class="dish"><div class="dish-head"><span class="diet nonveg" title="Non-vegetarian"></span><h3>Marchwangan Korma</h3><span class="dots"></span></div><p>For those who like heat: mutton in a bold gravy of Kashmiri red chillies.</p></li>
+          <li class="dish"><div class="dish-head"><span class="diet nonveg" title="Non-vegetarian"></span><h3>Seekh Kabab</h3><span class="dots"></span></div><p>Minced mutton with spices, shaped on skewers and cooked over coals.</p></li>
+          <li class="dish"><div class="dish-head"><span class="diet nonveg" title="Non-vegetarian"></span><h3>Waza Kokur</h3><span class="dots"></span></div><p>Chicken halves braised in spices and yogurt, then finished golden. A centrepiece of the trami.</p></li>
+          <li class="dish"><div class="dish-head"><span class="diet nonveg" title="Non-vegetarian"></span><h3>Daniwal Korma</h3><span class="dots"></span></div><p>Mutton korma finished with plenty of fresh coriander.</p></li>
+        </ul>
+      </div>
+
+      <div class="menu-cat" id="cat-veg" role="tabpanel" aria-labelledby="tab-veg">
+        <h3 class="menu-cat-title">Vegetarian</h3>
+        <p class="menu-cat-note">Kashmiri vegetarian cooking: lotus stem, greens and paneer.</p>
+        <ul class="dishes">
+          <li class="dish"><div class="dish-head"><span class="diet veg" title="Vegetarian"></span><h3>Kashmiri Dum Aloo</h3><span class="tag">Favourite</span><span class="dots"></span></div><p>Baby potatoes fried and simmered in a yogurt gravy of Kashmiri chilli, fennel and dry ginger.</p></li>
+          <li class="dish"><div class="dish-head"><span class="diet veg" title="Vegetarian"></span><h3>Nadru Yakhni</h3><span class="dots"></span></div><p>Lotus stem in a fragrant yogurt gravy with fennel and cardamom.</p></li>
+          <li class="dish"><div class="dish-head"><span class="diet veg" title="Vegetarian"></span><h3>Chaman Qaliya</h3><span class="dots"></span></div><p>Soft paneer in a golden turmeric and milk gravy.</p></li>
+          <li class="dish"><div class="dish-head"><span class="diet veg" title="Vegetarian"></span><h3>Haak</h3><span class="dots"></span></div><p>Kashmiri collard greens cooked simply in mustard oil with whole chillies.</p></li>
+          <li class="dish"><div class="dish-head"><span class="diet veg" title="Vegetarian"></span><h3>Rajma</h3><span class="dots"></span></div><p>Small Kashmiri red kidney beans, slow-cooked until creamy.</p></li>
+          <li class="dish"><div class="dish-head"><span class="diet veg" title="Vegetarian"></span><h3>Monji Haak</h3><span class="dots"></span></div><p>Kohlrabi and its leaves in a light, peppery broth.</p></li>
+        </ul>
+      </div>
+
+      <div class="menu-cat" id="cat-rice" role="tabpanel" aria-labelledby="tab-rice">
+        <h3 class="menu-cat-title">Rice &amp; Breads</h3>
+        <p class="menu-cat-note">Every Kashmiri meal is built around rice.</p>
+        <ul class="dishes">
+          <li class="dish"><div class="dish-head"><span class="diet veg" title="Vegetarian"></span><h3>Steamed Rice</h3><span class="dots"></span></div><p>Plain white rice, the heart of every Kashmiri meal.</p></li>
+          <li class="dish"><div class="dish-head"><span class="diet veg" title="Vegetarian"></span><h3>Modur Pulav</h3><span class="dots"></span></div><p>Sweet saffron rice with ghee, cinnamon, almonds and dried fruit.</p></li>
+          <li class="dish"><div class="dish-head"><span class="diet veg" title="Vegetarian"></span><h3>Girda</h3><span class="dots"></span></div><p>Round, dimpled bread straight from the kandur (tandoor).</p></li>
+          <li class="dish"><div class="dish-head"><span class="diet veg" title="Vegetarian"></span><h3>Lavasa</h3><span class="dots"></span></div><p>Thin, crisp-edged flatbread, perfect with noon chai.</p></li>
+        </ul>
+      </div>
+
+      <div class="menu-cat" id="cat-sides" role="tabpanel" aria-labelledby="tab-sides">
+        <h3 class="menu-cat-title">Chutneys</h3>
+        <p class="menu-cat-note">The little bowls that come with every trami.</p>
+        <ul class="dishes">
+          <li class="dish"><div class="dish-head"><span class="diet veg" title="Vegetarian"></span><h3>Muji Chetin</h3><span class="dots"></span></div><p>Grated radish and walnut folded into yogurt with green chilli and mint.</p></li>
+          <li class="dish"><div class="dish-head"><span class="diet veg" title="Vegetarian"></span><h3>Doon Chetin</h3><span class="dots"></span></div><p>Walnut chutney with yogurt, chilli and a little mint.</p></li>
+          <li class="dish"><div class="dish-head"><span class="diet veg" title="Vegetarian"></span><h3>Ruwangan Chetin</h3><span class="dots"></span></div><p>Tangy tomato chutney with Kashmiri chilli.</p></li>
+          <li class="dish"><div class="dish-head"><span class="diet veg" title="Vegetarian"></span><h3>Dahi</h3><span class="dots"></span></div><p>Cool, thick curd to balance the heat.</p></li>
+        </ul>
+      </div>
+
+      <div class="menu-cat" id="cat-sweet" role="tabpanel" aria-labelledby="tab-sweet">
+        <h3 class="menu-cat-title">Tea &amp; Sweets</h3>
+        <p class="menu-cat-note">How every Kashmiri meal should end.</p>
+        <ul class="dishes">
+          <li class="dish"><div class="dish-head"><span class="diet veg" title="Vegetarian"></span><h3>Kahwa</h3><span class="tag">Must try</span><span class="dots"></span></div><p>Green tea brewed with saffron, cardamom and cinnamon, topped with slivered almonds.</p></li>
+          <li class="dish"><div class="dish-head"><span class="diet veg" title="Vegetarian"></span><h3>Noon Chai</h3><span class="dots"></span></div><p>Kashmir’s famous pink salt tea, creamy and gently salted.</p></li>
+          <li class="dish"><div class="dish-head"><span class="diet veg" title="Vegetarian"></span><h3>Phirni</h3><span class="dots"></span></div><p>Chilled ground-rice pudding with cardamom and saffron, set in clay bowls.</p></li>
+          <li class="dish"><div class="dish-head"><span class="diet veg" title="Vegetarian"></span><h3>Shufta</h3><span class="dots"></span></div><p>A festive sweet of dried fruit, nuts and paneer glazed in spiced syrup.</p></li>
+        </ul>
+      </div>
+
+      <div class="menu-foot">
+        <span><span class="diet veg"></span> Vegetarian</span>
+        <span><span class="diet nonveg"></span> Non-vegetarian</span>
+        <span>Please tell us about any allergies</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ WAZWAN ============ -->
+  <section class="section wazwan" id="wazwan">
+    <div class="paisley-bg" aria-hidden="true"></div>
+    <div class="wrap" style="position:relative">
+      <div class="section-head reveal">
+        <span class="eyebrow">The Wazwan</span>
+        <h2>A feast in four acts</h2>
+        <p>Wazwan is the great ceremonial meal of Kashmir, cooked by master chefs called <em>wazas</em>. It is shared from a single copper trami, usually by four guests, and served course by course.</p>
+      </div>
+
+      <div class="ritual reveal">
+        <svg viewBox="0 0 64 64" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 20c0-6 4-10 10-10s10 4 10 10v4H22z"/><path d="M26 10c0-3 3-5 6-5s6 2 6 5"/><path d="M42 16c6 0 10 3 12 8"/><path d="M22 24c-3 6-3 12 0 16h20c3-4 3-10 0-16"/><path d="M8 46h48c0 6-10 12-24 12S8 52 8 46z"/><path d="M20 46c4-3 8-4 12-4s8 1 12 4"/></g></svg>
+        <div><b>It begins with Tash-t-Nari</b><p>Before the first dish arrives, a copper ewer and basin are carried to each guest for washing hands. Only then is the trami set down.</p></div>
+      </div>
+
+      <div class="acts">
+        <article class="act reveal">
+          <span class="act-num">Act I</span>
+          <h3>The Trami</h3>
+          <p>A mound of rice, crowned with the first dishes for everyone to share.</p>
+          <ol>
+            <li>Tabak Maaz <small>fried ribs</small></li>
+            <li>Seekh Kabab <small>skewers</small></li>
+            <li>Methi Maaz <small>fenugreek</small></li>
+            <li>Waza Kokur <small>chicken</small></li>
+          </ol>
+        </article>
+        <article class="act reveal">
+          <span class="act-num">Act II</span>
+          <h3>The Reds</h3>
+          <p>Rich, chilli-warm gravies served one after another.</p>
+          <ol>
+            <li>Rista <small>meatballs</small></li>
+            <li>Rogan Josh <small>red braise</small></li>
+            <li>Marchwangan Korma <small>fiery</small></li>
+          </ol>
+        </article>
+        <article class="act reveal">
+          <span class="act-num">Act III</span>
+          <h3>The Whites</h3>
+          <p>Cooling yogurt and milk gravies, fragrant with fennel and cardamom.</p>
+          <ol>
+            <li>Daniwal Korma <small>coriander</small></li>
+            <li>Aab Gosht <small>milk</small></li>
+            <li>Yakhni <small>yogurt</small></li>
+          </ol>
+        </article>
+        <article class="act finale reveal">
+          <span class="act-num">Finale</span>
+          <h3>Gushtaba</h3>
+          <p>The last and most celebrated course. Once Gushtaba is served, the feast is complete, and a cup of kahwa follows.</p>
+          <ol>
+            <li>Gushtaba <small>the finale</small></li>
+            <li>Phirni &amp; Kahwa <small>to close</small></li>
+          </ol>
+        </article>
+      </div>
+
+      <div class="wazwan-cta reveal">
+        <p>Planning a wedding, family function or a big get-together? Talk to us about a full Wazwan.</p>
+        <!-- PHONE: replace the href with tel:+91XXXXXXXXXX once the number is confirmed -->
+        <a href="#visit" class="btn btn-primary">Enquire about Wazwan <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ KAHWA ============ -->
+  <section class="section kahwa" id="kahwa">
+    <div class="wrap kahwa-grid">
+      <div class="kahwa-copy reveal">
+        <span class="eyebrow">After the feast</span>
+        <h2>A cup of kahwa, poured from the samovar.</h2>
+        <p>No Kashmiri meal ends without tea. Our kahwa is brewed with green tea, saffron and whole spices, then finished with crushed almonds. It warms you up and settles a big meal.</p>
+        <div class="spices" aria-label="Kahwa ingredients">
+          <span>Saffron</span><span>Green cardamom</span><span>Cinnamon</span><span>Almonds</span><span>Green tea</span>
+        </div>
+        <div class="teas">
+          <div class="tea"><div class="swatch" style="background:radial-gradient(circle at 35% 35%,#f4c35a,#c98a1c)"></div><b>Kahwa</b><span>Golden, sweet and fragrant with saffron.</span></div>
+          <div class="tea"><div class="swatch" style="background:radial-gradient(circle at 35% 35%,#f7cdd2,#d98e98)"></div><b>Noon Chai</b><span>Pink, creamy and salted. Best with lavasa or girda.</span></div>
+        </div>
+      </div>
+      <div class="kahwa-art reveal" aria-hidden="true">
+        <svg viewBox="0 0 400 400">
+          <defs>
+            <linearGradient id="samovar" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0" stop-color="#7a3d1f"/>
+              <stop offset=".35" stop-color="#e3a06a"/>
+              <stop offset=".55" stop-color="#c7793f"/>
+              <stop offset="1" stop-color="#6d3418"/>
+            </linearGradient>
+            <radialGradient id="tea" cx="45%" cy="40%" r="60%">
+              <stop offset="0" stop-color="#f4c35a"/>
+              <stop offset="1" stop-color="#b87814"/>
+            </radialGradient>
+          </defs>
+          <circle cx="200" cy="210" r="175" fill="#efe2cd"/>
+          <circle cx="200" cy="210" r="175" fill="none" stroke="#e0cbab" stroke-width="1.5" stroke-dasharray="2 8"/>
+          <!-- samovar -->
+          <g>
+            <ellipse cx="170" cy="344" rx="70" ry="10" fill="#3a2317" opacity=".18"/>
+            <path d="M130 330 h80 l-10 -22 h-60z" fill="url(#samovar)"/>
+            <rect x="152" y="292" width="36" height="18" fill="url(#samovar)"/>
+            <path d="M112 296 C 96 240, 104 160, 128 136 L 212 136 C 236 160, 244 240, 228 296 Z" fill="url(#samovar)"/>
+            <path d="M126 170 C 150 182, 190 182, 214 170" fill="none" stroke="#f6c996" stroke-width="2" opacity=".6"/>
+            <path d="M120 250 C 150 262, 190 262, 220 250" fill="none" stroke="#f6c996" stroke-width="2" opacity=".6"/>
+            <path d="M140 200 q10 -14 20 0 q10 14 20 0 q10 -14 20 0" fill="none" stroke="#f6c996" stroke-width="2" opacity=".55"/>
+            <path d="M140 222 q10 -14 20 0 q10 14 20 0 q10 -14 20 0" fill="none" stroke="#f6c996" stroke-width="2" opacity=".35"/>
+            <rect x="138" y="118" width="64" height="20" rx="4" fill="url(#samovar)"/>
+            <path d="M150 118 C 150 96, 190 96, 190 118 Z" fill="url(#samovar)"/>
+            <rect x="164" y="84" width="12" height="16" rx="3" fill="#8d4a26"/>
+            <circle cx="170" cy="80" r="7" fill="#c7793f"/>
+            <!-- handles -->
+            <path d="M112 170 C 88 170, 88 216, 110 220" fill="none" stroke="#8d4a26" stroke-width="7" stroke-linecap="round"/>
+            <path d="M228 170 C 252 170, 252 216, 230 220" fill="none" stroke="#8d4a26" stroke-width="7" stroke-linecap="round"/>
+            <!-- tap -->
+            <path d="M226 268 h32 l6 8 h-10 l-4 -4 h-24z" fill="#8d4a26"/>
+            <circle cx="244" cy="262" r="5" fill="#c7793f"/>
+          </g>
+          <!-- steam -->
+          <g class="steam" fill="none" stroke="#b9a58a" stroke-width="3" stroke-linecap="round">
+            <path d="M162 70 c-10 -14 10 -22 0 -36"/>
+            <path d="M178 66 c-10 -14 10 -22 0 -36"/>
+            <path d="M290 250 c-8 -12 8 -18 0 -30"/>
+          </g>
+          <!-- cup -->
+          <g>
+            <ellipse cx="292" cy="330" rx="54" ry="10" fill="#3a2317" opacity=".15"/>
+            <ellipse cx="292" cy="318" rx="56" ry="14" fill="#fbf6ee" stroke="#d9c6a4" stroke-width="2"/>
+            <path d="M256 272 h72 c0 30 -14 46 -36 46 s-36 -16 -36 -46z" fill="#fbf6ee" stroke="#d9c6a4" stroke-width="2"/>
+            <ellipse cx="292" cy="272" rx="36" ry="8" fill="url(#tea)"/>
+            <ellipse cx="282" cy="271" rx="4" ry="1.6" fill="#fff4dc"/>
+            <ellipse cx="298" cy="273" rx="3.5" ry="1.4" fill="#fff4dc"/>
+            <ellipse cx="292" cy="269" rx="3" ry="1.2" fill="#fff4dc"/>
+            <path d="M268 290 h48" stroke="#c2492b" stroke-width="3" opacity=".7"/>
+            <path d="M270 298 h44" stroke="#e09a2b" stroke-width="1.5" opacity=".7"/>
+          </g>
+          <!-- almonds & saffron -->
+          <g fill="#d9a066">
+            <ellipse cx="70" cy="300" rx="9" ry="5" transform="rotate(-30 70 300)"/>
+            <ellipse cx="88" cy="318" rx="9" ry="5" transform="rotate(20 88 318)"/>
+            <ellipse cx="64" cy="326" rx="9" ry="5" transform="rotate(70 64 326)"/>
+          </g>
+          <g stroke="#c2361c" stroke-width="2" stroke-linecap="round">
+            <path d="M340 180 l10 -8"/><path d="M346 196 l12 -3"/><path d="M332 196 l6 8"/>
+          </g>
+          <use href="#chinar" x="54" y="110" width="34" height="34" color="#c2492b" transform="rotate(-18 71 127)"/>
+          <use href="#chinar" x="318" y="96" width="22" height="22" color="#e09a2b" transform="rotate(20 329 107)"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ VISIT ============ -->
+  <section class="section" id="visit">
+    <div class="wrap visit-grid">
+      <div class="visit-card reveal">
+        <span class="eyebrow">Visit us</span>
+        <h2>Come hungry. Leave like family.</h2>
+
+        <div class="info-row">
+          <svg aria-hidden="true"><use href="#i-pin"/></svg>
+          <div><b>Address</b><a href="https://www.google.com/maps/search/?api=1&amp;query=Koshur+Darbar+Restaurant+Town+Plaza+Kulgam" target="_blank" rel="noopener">Ground Floor, Town Plaza<br>Kulgam, Jammu &amp; Kashmir 192231</a></div>
+        </div>
+
+        <!-- HOURS: update these once confirmed with the restaurant -->
+        <div class="info-row">
+          <svg aria-hidden="true"><use href="#i-clock"/></svg>
+          <div><b>Hours</b>
+            <ul class="hours">
+              <li><span>Lunch &amp; dinner</span><a href="https://www.google.com/maps/search/?api=1&amp;query=Koshur+Darbar+Restaurant+Kulgam" target="_blank" rel="noopener">Today’s hours on Google</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- PHONE: add the restaurant's number here, e.g.
+        <div class="info-row">
+          <svg aria-hidden="true"><use href="#i-phone"/></svg>
+          <div><b>Call to reserve</b><a href="tel:+91XXXXXXXXXX">+91 XXXXX XXXXX</a></div>
+        </div>
+        -->
+
+        <div class="info-row">
+          <svg aria-hidden="true"><use href="#i-star"/></svg>
+          <div><b>Guests say</b><a href="https://www.google.com/maps/search/?api=1&amp;query=Koshur+Darbar+Restaurant+Kulgam" target="_blank" rel="noopener">4.4 ★ on Google · Read reviews</a></div>
+        </div>
+
+        <div class="visit-actions">
+          <a class="btn btn-primary" href="https://www.google.com/maps/dir/?api=1&amp;destination=Koshur+Darbar+Restaurant+Town+Plaza+Kulgam" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-dir"/></svg> Get directions</a>
+        </div>
+      </div>
+
+      <div class="map reveal">
+        <a class="map-fallback" href="https://www.google.com/maps/search/?api=1&amp;query=Koshur+Darbar+Restaurant+Town+Plaza+Kulgam" target="_blank" rel="noopener">
+          <svg aria-hidden="true"><use href="#i-pin"/></svg>
+          <b>Town Plaza, Kulgam</b>
+          <span>Open in Google Maps →</span>
+        </a>
+        <iframe title="Map showing Koshur Darbar Restaurant, Town Plaza, Kulgam" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          src="https://www.google.com/maps?q=Koshur+Darbar+Restaurant,+Town+Plaza,+Kulgam,+Jammu+and+Kashmir+192231&amp;output=embed"></iframe>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div>
+        <a href="#top" class="brand"><svg aria-hidden="true" style="width:34px;height:34px;color:var(--chinar)"><use href="#chinar"/></svg><span class="brand-name">Koshur Darbar</span></a>
+        <p>Kashmiri food and Wazwan in the heart of Kulgam.</p>
+      </div>
+      <div class="footer-links">
+        <div>
+          <h4>Explore</h4>
+          <ul><li><a href="#story">Our Story</a></li><li><a href="#menu">Menu</a></li><li><a href="#wazwan">Wazwan</a></li><li><a href="#kahwa">Kahwa</a></li></ul>
+        </div>
+        <div>
+          <h4>Find us</h4>
+          <ul><li>Ground Floor, Town Plaza</li><li>Kulgam, J&amp;K 192231</li><li><a href="https://www.google.com/maps/dir/?api=1&amp;destination=Koshur+Darbar+Restaurant+Town+Plaza+Kulgam" target="_blank" rel="noopener">Directions →</a></li></ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year">2026</span> Koshur Darbar Restaurant</span>
+      <span>Made with saffron &amp; patience</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.documentElement.classList.add('js');
+
+  // Header background on scroll
+  const header = document.querySelector('.site-header');
+  const onScroll = () => header.classList.toggle('scrolled', window.scrollY > 24);
+  onScroll();
+  window.addEventListener('scroll', onScroll, { passive: true });
+
+  // Mobile menu
+  const toggle = document.querySelector('.menu-toggle');
+  const links = document.getElementById('nav-links');
+  const setMenu = (open) => {
+    links.classList.toggle('open', open);
+    header.classList.toggle('menu-open', open);
+    toggle.setAttribute('aria-expanded', String(open));
+    toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+  };
+  toggle.addEventListener('click', () => setMenu(!links.classList.contains('open')));
+  links.addEventListener('click', (e) => { if (e.target.closest('a')) setMenu(false); });
+
+  // Menu tabs
+  const tabs = [...document.querySelectorAll('.menu-tab')];
+  const panels = [...document.querySelectorAll('.menu-cat')];
+  const selectTab = (tab) => {
+    tabs.forEach((t) => {
+      const on = t === tab;
+      t.setAttribute('aria-selected', String(on));
+      t.tabIndex = on ? 0 : -1;
+    });
+    panels.forEach((p) => { p.hidden = p.id !== tab.getAttribute('aria-controls'); });
+  };
+  tabs.forEach((tab, i) => {
+    tab.addEventListener('click', () => selectTab(tab));
+    tab.addEventListener('keydown', (e) => {
+      const dir = e.key === 'ArrowRight' ? 1 : e.key === 'ArrowLeft' ? -1 : 0;
+      if (!dir) return;
+      const next = tabs[(i + dir + tabs.length) % tabs.length];
+      next.focus();
+      selectTab(next);
+    });
+  });
+  selectTab(tabs[0]);
+
+  // Reveal on scroll
+  const reveals = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) { entry.target.classList.add('in'); io.unobserve(entry.target); }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    reveals.forEach((el) => io.observe(el));
+  } else {
+    reveals.forEach((el) => el.classList.add('in'));
+  }
+
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
